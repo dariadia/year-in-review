@@ -2,7 +2,7 @@
   "meta_title": "YourCompany u Srbiji - 2022",
   "meta_description": "Da li te zanima šta se čitalo u Srbiji? Top 5 naslova, autora i najpopularnijih citata. Skroluj niže i saznaj!",
   "year_in_review_heading": "YourCompany i 2022. godina",
-  "year_in_review_desc": "Ova godina čitanja i slušanja knjiga je pri kraju! Da li si zainteresovan da vidiš kako su ostali čitaoci u {countryName} napredovali u čitanju? Onda skroluj dole i pogledaj!",
+  "year_in_review_desc": "Ova godina čitanja i slušanja knjiga je pri kraju! Da li si zainteresovan da vidiš kako su ostali čitaoci u {{countryName}} napredovali u čitanju? Onda skroluj dole i pogledaj!",
   "year_in_review_desc_world": "Ova godina čitanja <0>u svetu</0>",
   "caption_read": "{formattedCount} {pages, plural, one {stranica pročitana} few {stranice pročitane} other {stranica pročitano}}",
   "caption_listened": "{formattedCount} {count, plural, one {sat preslušan} few {dva sata preslušana} other {sati preslušano}}",
