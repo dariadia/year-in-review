@@ -2,7 +2,7 @@
   "meta_title": "YourCompany - 2022",
   "meta_description": "¿Te interesa conocer las tendencias de lectura en tu país? ¿Los libros y autores más leídos y las citas con más éxito? ¡Descubre todo abajo!",
   "year_in_review_heading": "YourCompany en 2022",
-  "year_in_review_desc": "¡Ya casi termina un año de lectura! ¿Quieres saber cómo les fue a los otros lectores de {{countryName}}? ¡Descubre todo abajo!",
+  "year_in_review_desc": "¡Ya casi termina un año de lectura! ¿Quieres saber cómo les fue a los otros lectores de <accented>{{countryName}}</accented>? ¡Descubre todo abajo!",
   "year_in_review_desc_world": "Un año de lectura <0>en el mundo</0>",
   "caption_read": "{formattedCount} {pages, plural, one {página leída} few {páginas leídas} other {páginas leídas}}",
   "caption_listened": "{formattedCount} {count, plural, one {hora de escucha} few {horas de escucha} other {horas de escucha}}",

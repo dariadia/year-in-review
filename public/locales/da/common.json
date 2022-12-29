@@ -2,7 +2,7 @@
   "meta_title": "YourCompany i Danmark — 2022",
   "meta_description": "Er du nysgerrig efter at se, hvordan de andre læsere i Danmark har klaret sig? Top 5 bøger og forfattere. Scroll ned og se det selv!",
   "year_in_review_heading": "YourCompany & 2022",
-  "year_in_review_desc": "Dette års læsetid og lyttetid er snart ovre! Er du nysgerrig efter at se, hvordan andre læsere i {{countryName}} klarede sig? Så scroll ned for selv at se det!",
+  "year_in_review_desc": "Dette års læsetid og lyttetid er snart ovre! Er du nysgerrig efter at se, hvordan andre læsere i <accented>{{countryName}}</accented> klarede sig? Så scroll ned for selv at se det!",
   "year_in_review_desc_world": "Det her års læsning <0>i verden</0>",
   "caption_read": "{formattedCount} {pages, plural, one {side læst} few {sider læst} other {sider læst}}",
   "caption_listened": "{formattedCount} {count, plural, one {time lyttet til} few {timer lyttet til} other {timer lyttet til}} ",

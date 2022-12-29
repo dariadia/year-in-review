@@ -2,7 +2,7 @@
   "meta_title": "YourCompany — 2022",
   "meta_description": "Are you interested in how your fellow readers were doing? Top 5 books, authors and the most popular quotes. Scroll down and see for yourself!",
   "year_in_review_heading": "YourCompany & 2022",
-  "year_in_review_desc": "This year of reading and listening has almost passed! Are you interested in how your fellow readers in {{countryName}} were doing? Then scroll down and see for yourself!",
+  "year_in_review_desc": "This year of reading and listening has almost passed! Are you interested in how your fellow readers in <accented>{{countryName}}</accented> were doing? Then scroll down and see for yourself!",
   "year_in_review_desc_world": "This year of reading <accented>in the world</accented>",
   "caption_read": "{formattedCount} {pages, plural, one {page read} few {pages read} other {pages read}}",
   "caption_listened": "{formattedCount} {count, plural, one {hour listened to} few {hours listened to} other {hours listened to}}",

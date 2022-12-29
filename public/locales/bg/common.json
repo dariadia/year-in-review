@@ -2,7 +2,7 @@
   "meta_title": "YourCompany в България през - 2022",
   "meta_description": "Обичаш да четеш? Топ 5 книги, автори и най-известните цитати. Плъзни надолу и провери сам!",
   "year_in_review_heading": "YourCompany и 2022 г.",
-  "year_in_review_desc": "Тази година на четене и слушане почти приключи! Интересно ли Ви е какво са правили Вашите приятели книгомани в {{countryName}}? Тогава плъзнете надолу, за да видите!",
+  "year_in_review_desc": "Тази година на четене и слушане почти приключи! Интересно ли Ви е какво са правили Вашите приятели книгомани в <accented>{{countryName}}</accented>? Тогава плъзнете надолу, за да видите!",
   "year_in_review_desc_world": "Тази година на четене <accented>по света</accented>",
   "caption_read": "{formattedCount} {pages, plural, one {прочетена страница} few {прочетени страници} other {прочетени страници}}",
   "caption_listened": "{formattedCount} {count, plural, one {изслушан час} few {изслушани часа} other {изслушани часове}}",

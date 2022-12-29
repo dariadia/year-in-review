@@ -2,7 +2,7 @@
   "meta_title": "YourCompany u Hrvatskoj - 2022",
   "meta_description": "Zanima li vas aktivnost čitatelja u Hrvatskoj? Top 5 knjiga, autora i najpopularnijih citata. Pomaknite se prema dolje i provjerite sami!",
   "year_in_review_heading": "YourCompany i 2022. godina",
-  "year_in_review_desc": "Ova godina čitanja i slušanja knjiga bliži se kraju! Jeste li zainteresirani vidjeti kako su drugi čitatelji u {{countryName}} napredovali u svom čitanju? Skrolajte prema dolje I pogledajte!",
+  "year_in_review_desc": "Ova godina čitanja i slušanja knjiga bliži se kraju! Jeste li zainteresirani vidjeti kako su drugi čitatelji u <accented>{{countryName}}</accented> napredovali u svom čitanju? Skrolajte prema dolje I pogledajte!",
   "year_in_review_desc_world": "Ova godina čitanja <0>u svijetu</0>",
   "caption_read": "{formattedCount} {pages, plural, one {stranica pročitana} few {stranice pročitane} other {stranica pročitano}}",
   "caption_listened": "{formattedCount} {count, plural, one {sat slušanja} few {dva sata slušanja} other {sati slušanja}}",

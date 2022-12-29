@@ -7,6 +7,11 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { useState } from 'react'
+
+// @ts-ignore
+import general from '/public/assets/data/countries.json'
+import { Event } from 'types/data'
 
 type Props = {
   country: string
@@ -18,17 +23,24 @@ const Homepage = (
   const router = useRouter()
   /* @ts-ignore */
   // It's a react-i18next: v12+ bug https://github.com/i18next/react-i18next/issues/1601
-  const { t } = useTranslation(['common', 'countries_locative'])
+  const { t } = useTranslation(['common', 'countries', 'countries_locative'])
+
+  const [activeTab, setActiveTab] = useState('read_pages')
+  const [activeTabLabel, setActiveTabLabel] = useState('read')
 
   return (
     <>
-      <Header />
+      <Header {...{ activeTab, activeTabLabel, general }} />
       <main>
         <h1>
           {t('common:year_in_review_heading')}
         </h1>
         <p className="year-in-review__desc">
-          {t("common:year_in_review_desc", { countryName: t(`countries_locative:${_props.country}`) })}
+          <Trans
+            i18nKey="year_in_review_desc"
+            values={{ countryName: t(`countries_locative:${_props.country}`) }}
+            components={{ accented: <span className="accented" /> }}
+          />
         </p>
         <h2 className="year-in-review__map-desc">
           <Trans
@@ -37,6 +49,109 @@ const Homepage = (
           />
         </h2>
       </main>
+      <ul className="map-navigation">
+        <li
+          id="read_pages"
+          className={`year-in-review__button ${activeTab === 'read_pages' ? 'active' : 'inactive'
+            }`}
+          onClick={(event: Event) =>
+            setActiveTab(event.target?.id as string)
+          }
+        >
+          <Trans
+            id="year-in-review.caption_read"
+            values={{
+              count: general.world?.read_pages,
+              formattedCount: general.world?.read_pages.toLocaleString(),
+            }}
+          />
+        </li>
+        <li
+          id="listened_hours"
+          className={`year-in-review__button ${activeTab === 'listened_hours'
+            ? 'active'
+            : 'inactive'
+            }`}
+          onClick={(event: Event) =>
+            setActiveTab(event.target?.id as string)
+          }
+        >
+          <Trans
+            id="year-in-review.caption_listened"
+            values={{
+              count: general.world?.listened_hours,
+              formattedCount: general.world?.listened_hours.toLocaleString(),
+            }}
+          />
+        </li>
+        <li
+          id="releases"
+          className={`year-in-review__button ${activeTab === 'releases' ? 'active' : 'inactive'
+            }`}
+          onClick={(event: Event) =>
+            setActiveTab(event.target?.id as string)
+          }
+        >
+          <Trans
+            id="year-in-review.caption_releases"
+            values={{
+              count: general.world?.releases,
+              formattedCount: general.world?.releases.toLocaleString(),
+            }}
+          />
+        </li>
+        <li
+          id="likes_count"
+          className={`year-in-review__button ${activeTab === 'likes_count' ? 'active' : 'inactive'
+            }`}
+          onClick={(event: Event) =>
+            setActiveTab(event.target?.id as string)
+          }
+        >
+          <Trans
+            id="year-in-review.caption_likes"
+            values={{
+              count: general.world?.likes_count,
+              formattedCount: general.world?.likes_count.toLocaleString(),
+            }}
+          />
+        </li>
+        <li
+          id="quotes_count"
+          className={`year-in-review__button ${activeTab === 'quotes_count' ? 'active' : 'inactive'
+            }`}
+          onClick={(event: Event) =>
+            setActiveTab(event.target?.id as string)
+          }
+        >
+          <Trans
+            id="year-in-review.caption_quotes"
+            values={{
+              count: general.world?.likes_count,
+              formattedCount: general.world?.likes_count.toLocaleString(),
+            }}
+          />
+        </li>
+        <li
+          id="emotions_count"
+          className={`year-in-review__button ${activeTab === 'emotions_count'
+            ? 'active'
+            : 'inactive'
+            }`}
+          onClick={(event: Event) =>
+            setActiveTab(event.target?.id as string)
+          }
+        >
+          <Trans
+            id="year-in-review.caption_emotions"
+            values={{
+              count: general.world?.emotions_count,
+              formattedCount: general.world?.emotions_count.toLocaleString(),
+            }}
+          />
+        </li>
+      </ul>
+      <div id="map-container" />
       <Footer />
     </>
   )
@@ -58,6 +173,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({
       country: LOCALE_TO_COUNTRY_CODE[locale as keyof typeof LOCALE_TO_COUNTRY_CODE],
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
+        'countries',
         'countries_locative'
       ])),
     },
