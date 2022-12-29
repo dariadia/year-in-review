@@ -1,0 +1,63 @@
+@font-face {
+  font-family: Spectral;
+  font-weight: regular;
+  font-display: swap;
+  src: url("spectral/spectral-v7-latin_cyrillic-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: Spectral;
+  font-weight: regular;
+  font-style: italic;
+  font-display: swap;
+  src: url("spectral/spectral-v7-latin_cyrillic-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: Spectral;
+  font-weight: 600;
+  font-display: swap;
+  src: url("spectral/spectral-v7-latin_cyrillic-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: Spectral;
+  font-weight: 700;
+  font-display: swap;
+  src: url("spectral/spectral-v7-latin_cyrillic-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: Spectral;
+  font-weight: 800;
+  font-display: swap;
+  src: url("spectral/spectral-v7-latin_cyrillic-800.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Karla;
+  font-weight: regular;
+  font-display: swap;
+  src: url("karla/karla-v15-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: Karla;
+  font-weight: regular;
+  font-style: italic;
+  font-display: swap;
+  src: url("karla/karla-v15-latin-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: Karla;
+  font-weight: 600;
+  font-display: swap;
+  src: url("karla/karla-v15-latin-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: Karla;
+  font-weight: 700;
+  font-display: swap;
+  src: url("karla/karla-v15-latin-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: Karla;
+  font-weight: 800;
+  font-display: swap;
+  src: url("karla/karla-v15-latin-800.woff2") format("woff2");
+}

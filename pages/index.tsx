@@ -28,8 +28,9 @@ const Homepage = (
 
   return (
     <>
+    <Header />
       <main>
-        <Header title={t('meta_title')} />
+        
       </main>
       <Footer />
     </>
@@ -42,7 +43,6 @@ export const getStaticProps: GetStaticProps<Props> = async ({
   props: {
     ...(await serverSideTranslations(locale ?? 'en', [
       'common',
-      'footer',
     ])),
   },
 })
