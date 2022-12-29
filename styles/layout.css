@@ -3,11 +3,25 @@
   --accent: #1FB6FF;
   --secondary: #1D2330;
   --border: rgba(255,255,255,0.4);
+  --fontMain: 'Karla, Arial, sans-serif';
+  --fontAccent: 'Spectral, Georgia, serif';
 }
 
 body {
   background-color: var(--main);
   color: white;
+  font-family: var(--fontMain);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+  transition: color 0.3s;
 }
 
 header {
@@ -30,8 +44,25 @@ header {
   background: url("https://cdn4.vectorstock.com/i/1000x1000/41/03/bird-company-logo-template-design-vector-33654103.jpg") center -22px / 110px no-repeat;
 }
 
+main {
+  padding: 12px;
+}
+
+.accented {
+  color: var(--accent);
+}
+
+h1 {
+  font-size: 52px;
+  line-height: 60px;
+}
+
+h2 {
+  font-size: 34px;
+  line-height: 40px;
+}
 
 footer {
   position: sticky;
-  bottom: 0
+  bottom: 0;
 }
