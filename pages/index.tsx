@@ -27,16 +27,9 @@ const Homepage = (
 
   const [activeTab, setActiveTab] = useState('read_pages')
   const [activeTabLabel, setActiveTabLabel] = useState('read')
-  let mapNode: Node|null = null
-
-  if (typeof window !== 'undefined') {
-    mapNode = document.getElementById('map-container')
-    if (mapNode && mapNode.childNodes?.length > 1) {
-      mapNode?.removeChild(mapNode.firstChild as ChildNode)
-    }
-  }
 
   const setMapTab = (id: string): void => {
+    const mapNode = document.getElementById('map-container')
     if (mapNode && mapNode.firstChild) {
       mapNode.removeChild(mapNode.firstChild)
     }

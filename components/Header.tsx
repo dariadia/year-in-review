@@ -27,13 +27,13 @@ anychart.onDocumentReady(function () {
     map.geoData('anychart.maps.world');
     map.interactivity().selectionMode('none');
     map.padding(0);
-    map.background().fill("black");
+    map.background().fill("#1D2330");
     var dataSet = anychart.data.set(${data});
     var density_data = dataSet.mapAs({'size': '${sizedAs}'});
     var series = map.bubble(density_data);
     map.maxBubbleSize('10%')
       .minBubbleSize('1%');
-    series.fill("#3456F3", 0.8);
+    series.fill("#1FB6FF", 0.8);
     series.stroke("none");
     series.labels(false)
       .selectionMode('none');
