@@ -172,6 +172,7 @@ const LOCALE_TO_COUNTRY_CODE = {
   en: 'GB',
   es: 'MX',
   bg: 'BG',
+  hr: 'HR',
 }
 
 export const getStaticProps: GetStaticProps<Props> = async ({
@@ -179,7 +180,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({
 }) => {
   return ({
     props: {
-      country: LOCALE_TO_COUNTRY_CODE[locale as keyof typeof LOCALE_TO_COUNTRY_CODE],
+      country: LOCALE_TO_COUNTRY_CODE[locale as keyof typeof LOCALE_TO_COUNTRY_CODE] || 'RS',
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'countries',
