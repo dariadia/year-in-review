@@ -8,7 +8,7 @@ import type { DocumentProps } from 'next/document'
 import i18nextConfig from '../next-i18next.config'
 
 type Props = DocumentProps & {
-  // to-add custom document props
+  // add custom document props
 }
 
 class MyDocument extends Document<Props> {
