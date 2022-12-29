@@ -55,9 +55,9 @@ anychart.onDocumentReady(function () {
     map.draw()
 });`
 
-type Props = { activeTab: string, activeTabLabel: string, general: GeneralData }
+type Props = { activeTab: string, activeTabLabel: string, general: GeneralData, country: string }
 
-export const Header: FC<Props> = ({ activeTab, activeTabLabel, general }) => {
+export const Header: FC<Props> = ({ activeTab, activeTabLabel, general, country }) => {
   /* @ts-ignore */
   // It's a react-i18next: v12+ bug https://github.com/i18next/react-i18next/issues/1601
   const { t } = useTranslation(['common', 'countries'])
@@ -140,7 +140,8 @@ export const Header: FC<Props> = ({ activeTab, activeTabLabel, general }) => {
         {getMapScript(
           JSON.stringify(mapCountriesData(general.countries, t)),
           activeTab,
-          t(`common:caption_${activeTabLabel}`),
+          // @ts-ignore
+          t(`common:caption_${activeTabLabel}`, {formattedCount: '', count: general.countries[country.toLowerCase()][activeTab]}),
         )}
       </script>
     </Head>

@@ -39,7 +39,7 @@ const Homepage = (
 
   return (
     <>
-      <Header {...{ activeTab, activeTabLabel, general }} />
+      <Header {...{ activeTab, activeTabLabel, general, country: _props.country }} />
       <main>
         <h1>
           {t('common:year_in_review_heading')}
@@ -57,110 +57,110 @@ const Homepage = (
             components={{ accented: <span className="accented" /> }}
           />
         </h2>
+        <ul className="map-navigation">
+          <li
+            id="read_pages"
+            className={`year-in-review__button ${activeTab === 'read_pages' ? 'active' : 'inactive'
+              }`}
+            onClick={(event: Event) =>
+              setMapTab(event.target?.id as string)
+            }
+          >
+            <Trans
+              i18nKey="caption_read"
+              count={general.world?.read_pages}
+              values={{
+                formattedCount: general.world?.read_pages.toLocaleString(),
+              }}
+            />
+          </li>
+          <li
+            id="listened_hours"
+            className={`year-in-review__button ${activeTab === 'listened_hours'
+              ? 'active'
+              : 'inactive'
+              }`}
+            onClick={(event: Event) =>
+              setMapTab(event.target?.id as string)
+            }
+          >
+            <Trans
+              i18nKey="caption_listened"
+              count={general.world?.listened_hours}
+              values={{
+                formattedCount: general.world?.listened_hours.toLocaleString(),
+              }}
+            />
+          </li>
+          <li
+            id="releases"
+            className={`year-in-review__button ${activeTab === 'releases' ? 'active' : 'inactive'
+              }`}
+            onClick={(event: Event) =>
+              setMapTab(event.target?.id as string)
+            }
+          >
+            <Trans
+              i18nKey="caption_releases"
+              count={general.world?.releases}
+              values={{
+                formattedCount: general.world?.releases.toLocaleString(),
+              }}
+            />
+          </li>
+          <li
+            id="likes_count"
+            className={`year-in-review__button ${activeTab === 'likes_count' ? 'active' : 'inactive'
+              }`}
+            onClick={(event: Event) =>
+              setMapTab(event.target?.id as string)
+            }
+          >
+            <Trans
+              i18nKey="caption_likes"
+              count={general.world?.likes_count}
+              values={{
+                formattedCount: general.world?.likes_count.toLocaleString(),
+              }}
+            />
+          </li>
+          <li
+            id="quotes_count"
+            className={`year-in-review__button ${activeTab === 'quotes_count' ? 'active' : 'inactive'
+              }`}
+            onClick={(event: Event) =>
+              setMapTab(event.target?.id as string)
+            }
+          >
+            <Trans
+              i18nKey="caption_quotes"
+              count={general.world?.quotes_count}
+              values={{
+                formattedCount: general.world?.quotes_count.toLocaleString(),
+              }}
+            />
+          </li>
+          <li
+            id="emotions_count"
+            className={`year-in-review__button ${activeTab === 'emotions_count'
+              ? 'active'
+              : 'inactive'
+              }`}
+            onClick={(event: Event) =>
+              setMapTab(event.target?.id as string)
+            }
+          >
+            <Trans
+              i18nKey="caption_emotions"
+              count={general.world?.emotions_count}
+              values={{
+                formattedCount: general.world?.emotions_count.toLocaleString(),
+              }}
+            />
+          </li>
+        </ul>
+        <div id="map-container" />
       </main>
-      <ul className="map-navigation">
-        <li
-          id="read_pages"
-          className={`year-in-review__button ${activeTab === 'read_pages' ? 'active' : 'inactive'
-            }`}
-          onClick={(event: Event) =>
-            setMapTab(event.target?.id as string)
-          }
-        >
-          <Trans
-            i18nKey="caption_read"
-            values={{
-              count: general.world?.read_pages,
-              formattedCount: general.world?.read_pages.toLocaleString(),
-            }}
-          />
-        </li>
-        <li
-          id="listened_hours"
-          className={`year-in-review__button ${activeTab === 'listened_hours'
-            ? 'active'
-            : 'inactive'
-            }`}
-          onClick={(event: Event) =>
-            setMapTab(event.target?.id as string)
-          }
-        >
-          <Trans
-            i18nKey="caption_listened"
-            values={{
-              count: general.world?.listened_hours,
-              formattedCount: general.world?.listened_hours.toLocaleString(),
-            }}
-          />
-        </li>
-        <li
-          id="releases"
-          className={`year-in-review__button ${activeTab === 'releases' ? 'active' : 'inactive'
-            }`}
-          onClick={(event: Event) =>
-            setMapTab(event.target?.id as string)
-          }
-        >
-          <Trans
-            i18nKey="caption_releases"
-            values={{
-              count: general.world?.releases,
-              formattedCount: general.world?.releases.toLocaleString(),
-            }}
-          />
-        </li>
-        <li
-          id="likes_count"
-          className={`year-in-review__button ${activeTab === 'likes_count' ? 'active' : 'inactive'
-            }`}
-          onClick={(event: Event) =>
-            setMapTab(event.target?.id as string)
-          }
-        >
-          <Trans
-            i18nKey="caption_likes"
-            values={{
-              count: general.world?.likes_count,
-              formattedCount: general.world?.likes_count.toLocaleString(),
-            }}
-          />
-        </li>
-        <li
-          id="quotes_count"
-          className={`year-in-review__button ${activeTab === 'quotes_count' ? 'active' : 'inactive'
-            }`}
-          onClick={(event: Event) =>
-            setMapTab(event.target?.id as string)
-          }
-        >
-          <Trans
-            i18nKey="caption_quotes"
-            values={{
-              count: general.world?.likes_count,
-              formattedCount: general.world?.likes_count.toLocaleString(),
-            }}
-          />
-        </li>
-        <li
-          id="emotions_count"
-          className={`year-in-review__button ${activeTab === 'emotions_count'
-            ? 'active'
-            : 'inactive'
-            }`}
-          onClick={(event: Event) =>
-            setMapTab(event.target?.id as string)
-          }
-        >
-          <Trans
-            i18nKey="caption_emotions"
-            values={{
-              count: general.world?.emotions_count,
-              formattedCount: general.world?.emotions_count.toLocaleString(),
-            }}
-          />
-        </li>
-      </ul>
-      <div id="map-container" />
       <Footer />
     </>
   )
