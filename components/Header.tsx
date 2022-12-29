@@ -31,7 +31,7 @@ anychart.onDocumentReady(function () {
     var dataSet = anychart.data.set(${data});
     var density_data = dataSet.mapAs({'size': '${sizedAs}'});
     var series = map.bubble(density_data);
-    map.maxBubbleSize('5%')
+    map.maxBubbleSize('10%')
       .minBubbleSize('1%');
     series.fill("#3456F3", 0.8);
     series.stroke("none");

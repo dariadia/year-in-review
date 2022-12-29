@@ -27,6 +27,22 @@ const Homepage = (
 
   const [activeTab, setActiveTab] = useState('read_pages')
   const [activeTabLabel, setActiveTabLabel] = useState('read')
+  let mapNode: Node|null = null
+
+  if (typeof window !== 'undefined') {
+    mapNode = document.getElementById('map-container')
+    if (mapNode && mapNode.childNodes?.length > 1) {
+      mapNode?.removeChild(mapNode.firstChild as ChildNode)
+    }
+  }
+
+  const setMapTab = (id: string): void => {
+    if (mapNode && mapNode.firstChild) {
+      mapNode.removeChild(mapNode.firstChild)
+    }
+    setActiveTab(id)
+    setActiveTabLabel(id?.split('_')[0])
+  }
 
   return (
     <>
@@ -55,11 +71,11 @@ const Homepage = (
           className={`year-in-review__button ${activeTab === 'read_pages' ? 'active' : 'inactive'
             }`}
           onClick={(event: Event) =>
-            setActiveTab(event.target?.id as string)
+            setMapTab(event.target?.id as string)
           }
         >
           <Trans
-            id="year-in-review.caption_read"
+            i18nKey="caption_read"
             values={{
               count: general.world?.read_pages,
               formattedCount: general.world?.read_pages.toLocaleString(),
@@ -73,11 +89,11 @@ const Homepage = (
             : 'inactive'
             }`}
           onClick={(event: Event) =>
-            setActiveTab(event.target?.id as string)
+            setMapTab(event.target?.id as string)
           }
         >
           <Trans
-            id="year-in-review.caption_listened"
+            i18nKey="caption_listened"
             values={{
               count: general.world?.listened_hours,
               formattedCount: general.world?.listened_hours.toLocaleString(),
@@ -89,11 +105,11 @@ const Homepage = (
           className={`year-in-review__button ${activeTab === 'releases' ? 'active' : 'inactive'
             }`}
           onClick={(event: Event) =>
-            setActiveTab(event.target?.id as string)
+            setMapTab(event.target?.id as string)
           }
         >
           <Trans
-            id="year-in-review.caption_releases"
+            i18nKey="caption_releases"
             values={{
               count: general.world?.releases,
               formattedCount: general.world?.releases.toLocaleString(),
@@ -105,11 +121,11 @@ const Homepage = (
           className={`year-in-review__button ${activeTab === 'likes_count' ? 'active' : 'inactive'
             }`}
           onClick={(event: Event) =>
-            setActiveTab(event.target?.id as string)
+            setMapTab(event.target?.id as string)
           }
         >
           <Trans
-            id="year-in-review.caption_likes"
+            i18nKey="caption_likes"
             values={{
               count: general.world?.likes_count,
               formattedCount: general.world?.likes_count.toLocaleString(),
@@ -121,11 +137,11 @@ const Homepage = (
           className={`year-in-review__button ${activeTab === 'quotes_count' ? 'active' : 'inactive'
             }`}
           onClick={(event: Event) =>
-            setActiveTab(event.target?.id as string)
+            setMapTab(event.target?.id as string)
           }
         >
           <Trans
-            id="year-in-review.caption_quotes"
+            i18nKey="caption_quotes"
             values={{
               count: general.world?.likes_count,
               formattedCount: general.world?.likes_count.toLocaleString(),
@@ -139,11 +155,11 @@ const Homepage = (
             : 'inactive'
             }`}
           onClick={(event: Event) =>
-            setActiveTab(event.target?.id as string)
+            setMapTab(event.target?.id as string)
           }
         >
           <Trans
-            id="year-in-review.caption_emotions"
+            i18nKey="caption_emotions"
             values={{
               count: general.world?.emotions_count,
               formattedCount: general.world?.emotions_count.toLocaleString(),
