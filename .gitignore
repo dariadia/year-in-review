@@ -1,13 +1,35 @@
-*.sublime-project
-*.sublime-workspace
-*.DS_Store
-*.log
-*.vscode
-.idea
-.env
-.env.docker
-.cache-loader
+# Dependencies
 node_modules
-build
-.nyc_output
-coverage
+
+# Dist
+dist
+.next
+out
+
+# OS
+.DS_Store
+
+# Development Environment
+.vscode
+.idea
+
+# Logs
+*.log
+
+# Testing
+coverage/
+/coverage
+/cypress/videos
+/cypress/screenshots
+/cypress/plugins
+/cypress/support
+/cypress/fixtures/example.json
+cypress.json
+!/cypress/cypress.json
+
+# npm (all lock files except the root one)
+package-lock.json
+!/package-lock.json
+
+# typescript
+tsconfig.tsbuildinfo
