@@ -16,6 +16,8 @@ const Homepage = (
   _props: InferGetStaticPropsType<typeof getStaticProps>
 ) => {
   const router = useRouter()
+  /* @ts-ignore */
+  // It's a react-i18next: v12+ bug https://github.com/i18next/react-i18next/issues/1601
   const { t } = useTranslation('common')
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -27,7 +29,7 @@ const Homepage = (
   return (
     <>
       <main>
-        <Header heading={t('h1')} title={t('title')} />
+        <Header title={t('meta_title')} />
       </main>
       <Footer />
     </>
