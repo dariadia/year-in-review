@@ -246,17 +246,13 @@ const GraphBar = ({
             <img src={cover} alt={title} className="bar__resource-cover" />
             <div className="books-graph__bar__tooltip-body">
               {authors.map((author, index) => (
-                <>
-                  <a href={urlHelper.author(author.uuid)} target="_blank">
-                    {author.author_name}
-                  </a>
+                <span key={`${author}-${index}`}>
+                  <span>{author.author_name}</span>
                   {index < authors.length - 1 && ', '}
-                </>
+                </span>
               ))}
               <br />
-              <a href={urlHelper.resource(uuid, type)} target="_blank">
-                {title}
-              </a>
+              {title}
             </div>
           </div>
         </a>
@@ -286,7 +282,7 @@ export const YearInReviewPersonal = ({
       <h2>
         <Trans
           i18nKey="you_yourcompany_2022"
-          components={{ accented: <span className="accented_orange" /> }}
+          components={{ accented: <span className="accented" /> }}
         />
       </h2>
       <p>
@@ -299,7 +295,7 @@ export const YearInReviewPersonal = ({
             <h2>
               <Trans
                 i18nKey="personal_books_heading"
-                components={{ accented: <span className="accented_orange" /> }}
+                components={{ accented: <span className="accented" /> }}
               />
             </h2>
             <p>
@@ -378,7 +374,7 @@ export const YearInReviewPersonal = ({
             <h2>
               <Trans
                 i18nKey="personal_audiobooks_heading"
-                components={{ accented: <span className="accented_orange" /> }}
+                components={{ accented: <span className="accented" /> }}
               />
             </h2>
             <p>
@@ -510,7 +506,7 @@ export const YearInReviewPersonal = ({
         <h2 >
           <Trans
             i18nKey="reading_stats_heading"
-            components={{ accented: <span className="accented_orange" /> }}
+            components={{ accented: <span className="accented" /> }}
           />
         </h2>
 

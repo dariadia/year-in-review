@@ -174,13 +174,13 @@ const Homepage = (
           setAuth,
           t,
         }} />
+      </main>
       <YearInReviewPersonal {...{
           personal,
           quiz,
           isDesktop: getDeviceType(typeof window !== 'undefined' ? window?.innerWidth : 900).desktop,
           isTablet: getDeviceType(typeof window !== 'undefined' ? window?.innerWidth : 900).tablet,
         }} />
-      </main>
       <Footer />
     </>
   )

@@ -17,10 +17,6 @@
   color: #c1f642
 }
 
-.year-in-review__wrapper .accented_orange {
-  color: #ff7800
-}
-
 .year-in-review__wrapper .text_capitalised {
   text-transform: capitalize
 }
@@ -727,8 +723,7 @@ ul {
 }
 
 .yourcompany-2022__personal {
-  background: linear-gradient(180deg, #fccfd7 0, #a9c0ef 100%);
-  color: #000
+  background: var(--secondary);
 }
 
 .yourcompany-2022__personal .yourcompany-2022__column {
