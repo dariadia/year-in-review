@@ -1,5 +1,3 @@
-import { isEmpty } from "lodash"
-import { FC } from "react"
 import { Trans } from "react-i18next"
 import { YearInReviewBook, YearInReviewBooks, PersonalData } from "types/data"
 import { getReducedNumber, urlHelper } from "./CountryDataShowcase"
@@ -279,7 +277,7 @@ export const YearInReviewPersonal = ({
               <Trans i18nKey="personal_books_desc" />
             </p>
             <div className="personal_stats">
-              <div className="personal_stats-item">
+              <div key="personal_stats-item-1" className="personal_stats-item">
                 <Trans
                   i18nKey="finished_books"
                   count={personal?.books_finished_count}
@@ -295,7 +293,7 @@ export const YearInReviewPersonal = ({
                   </span>
                 </div>
               </div>
-              <div className="personal_stats-item">
+              <div key="personal_stats-item-2" className="personal_stats-item">
                 <Trans
                   i18nKey="pages_read"
                   count={personal?.pages_read}
