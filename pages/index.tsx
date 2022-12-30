@@ -15,7 +15,8 @@ import personal from '/public/assets/data/user-data.json'
 // @ts-ignore
 import quiz from '/public/assets/data/quiz-data.json'
 // @ts-ignore
-import country from '/public/assets/data/coumtry-data.json'
+import country from '/public/assets/data/country-data.json'
+import { YearInReviewGeneralData } from 'components/CountryDataShowcase'
 
 
 type Props = {
@@ -32,6 +33,7 @@ const Homepage = (
 
   const [activeTab, setActiveTab] = useState('read_pages')
   const [activeTabLabel, setActiveTabLabel] = useState('read')
+  const [isAuth, setAuth] = useState(false)
 
   const setMapTab = (id: string): void => {
     const mapNode = document.getElementById('map-container')
@@ -165,7 +167,12 @@ const Homepage = (
           </li>
         </ul>
         <div id="map-container" />
-
+        <YearInReviewGeneralData {...{
+  country,
+  userCountry: country,
+  auth: isAuth,
+  setAuth,
+}} />
       </main>
       <Footer />
     </>

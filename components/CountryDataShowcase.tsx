@@ -228,19 +228,15 @@ const monthIndicesToLocaleIds = {
 type Props = {
   country: CountryData
   userCountry: string
-  isDesktop: boolean
-  isTablet: boolean
-  auth?: boolean
-  requested?: boolean
+  auth: boolean
+  setAuth: (value: boolean) => void
 }
 
 export const YearInReviewGeneralData: FC<Props> = ({
   country,
   userCountry,
-  isDesktop,
-  isTablet,
   auth,
-  requested,
+  setAuth,
 }): JSX.Element => (
   <section className="bookmate-2022__general_data">
     {country.quotes.length && userCountry !== 'dk' ? (
@@ -253,7 +249,7 @@ export const YearInReviewGeneralData: FC<Props> = ({
                 country: (
                   <span className="accented">
                     <Trans
-                      id={`countries-locative.${userCountry.toLocaleUpperCase()}`}
+                      id={`countries_locative.${userCountry}`}
                     />
                   </span>
                 ),
@@ -275,36 +271,35 @@ export const YearInReviewGeneralData: FC<Props> = ({
       </>
     ) : null}
     {country.authors.length ? (
-      <>
-        <article className="bookmate-2022__general_authors">
-          <h2>
-            <Trans
-              id="year-in-review.subh2_authors"
-              values={{
-                country: (
-                  <span className="accented">
-                    <Trans
-                      id={`countries-locative.${userCountry.toLocaleUpperCase()}`}
-                    />
-                  </span>
-                ),
-              }}
-            />
-          </h2>
-          <Trans i18nKey="authors_lead_in" />
-          <div className="horizontal-scroller">
-            <ul className="country-items__list">
-              {country.authors.map((author, index) => (
-                <YearInReviewAuthorSample
-                  key={`author-${index}`}
-                  author={author}
-                  index={index}
-                />
-              ))}
-            </ul>
-          </div>
-        </article>
-      </>
+      <article className="bookmate-2022__general_authors">
+        <h2>
+          <Trans
+            i18nKey="subheading_authors"
+            values={{
+              country: (
+                <span className="accented">
+                  <Trans
+                    id={`countries_locative.${userCountry}`}
+                  />
+                </span>
+              ),
+            }}
+          />
+        </h2>
+        {/** @ts-ignore **/}
+        <Trans i18nKey="authors_lead_in" />
+        <div className="horizontal-scroller">
+          <ul className="country-items__list">
+            {country.authors.map((author, index) => (
+              <YearInReviewAuthorSample
+                key={`author-${index}`}
+                author={author}
+                index={index}
+              />
+            ))}
+          </ul>
+        </div>
+      </article>
     ) : null}
     {country.books.length ? (
       <>
@@ -316,8 +311,7 @@ export const YearInReviewGeneralData: FC<Props> = ({
                 country: (
                   <span className="accented">
                     <Trans
-                      id={`countries-locative.${userCountry.toLocaleUpperCase()}`}
-                    />
+                      id={`countries_locative.${userCountry}`}/>
                   </span>
                 ),
               }}
@@ -349,7 +343,7 @@ export const YearInReviewGeneralData: FC<Props> = ({
                 country: (
                   <span className="accented">
                     <Trans
-                      id={`countries-locative.${userCountry.toLocaleUpperCase()}`}
+                      id={`countries_locative.${userCountry}`}
                     />
                   </span>
                 ),
@@ -381,14 +375,13 @@ export const YearInReviewGeneralData: FC<Props> = ({
                 country: (
                   <span className="accented">
                     <Trans
-                      id={`countries-locative.${userCountry.toLocaleUpperCase()}`}
+                      id={`countries_locative.${userCountry}`}
                     />
                   </span>
                 ),
               }}
             />
           </h2>
-
           <ul className="country-items__list">
             {country.most_read_month.map(month => <li className="most-read-month">
               <Trans
@@ -400,37 +393,33 @@ export const YearInReviewGeneralData: FC<Props> = ({
         </article>
       </>
     ) : null}
-    {!requested && (
-      <>
-        <div
-          className={`year-in-review__banner${auth ? ' banner-uncaptioned' : ''
-            }`}
-        >
-          <h3>
-            <Trans
-              id="year-in-review.you_bookmate_2022"
-              components={[<span />]}
-            />
-          </h3>
+    <div
+      className={`year-in-review__banner${auth ? ' banner-uncaptioned' : ''
+        }`}
+    >
+      <h3>
+        <Trans
+          id="year-in-review.you_bookmate_2022"
+          components={[<span />]}
+        />
+      </h3>
+      <p>
+        <Trans i18nKey="banner_desc" />
+      </p>
+      {!auth && (
+        <>
           <p>
-            <Trans i18nKey="banner_desc" />
+            <Trans i18nKey="banner_hint" />
           </p>
-          {!auth && (
-            <>
-              <p>
-                <Trans i18nKey="banner_hint" />
-              </p>
-              <button><Trans i18nKey="login" /></button>
-            </>
-          )}
-          <img
-            className="banner__decor"
-            src="https://a.bmstatic.com/iu/74/195/Frame 12-0c853f5eaacd5c68ca28c2ce3469a24c.svg"
-            alt="decor"
-          />
-        </div>
-        {!auth || requested ? <div className="black-padding" /> : null}
-      </>
-    )}
+          <button onClick={() => setAuth(true)}><Trans i18nKey="login" /></button>
+        </>
+      )}
+      <img
+        className="banner__decor"
+        src="https://a.bmstatic.com/iu/74/195/Frame 12-0c853f5eaacd5c68ca28c2ce3469a24c.svg"
+        alt="decor"
+      />
+    </div>
+    {!auth ? <div className="black-padding" /> : null}
   </section>
 )
