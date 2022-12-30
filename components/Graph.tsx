@@ -44,9 +44,7 @@ const GraphBooks = ({
           ? GRAPH_DESKTOP.GRAPH_WIDTH
           : isTablet
             ? GRAPH_TABLET.GRAPH_WIDTH
-            : window?.innerWidth > 330
-              ? GRAPH_MOBILE.GRAPH_WIDTH
-              : GRAPH_MOBILE_SMALL.GRAPH_WIDTH
+            : GRAPH_MOBILE.GRAPH_WIDTH 
       }
       max={data?.max_pages as number}
       quantityValue="pages"
@@ -59,27 +57,23 @@ const GraphBooks = ({
           ? GRAPH_DESKTOP.GRAPH_WIDTH
           : isTablet
             ? GRAPH_TABLET.GRAPH_WIDTH
-            : window?.innerWidth > 330
-              ? GRAPH_MOBILE.GRAPH_WIDTH
-              : GRAPH_MOBILE_SMALL.GRAPH_WIDTH
+            : GRAPH_MOBILE.GRAPH_WIDTH
           }px`,
       }}
     >
       {getGraphAxis(isDesktop || isTablet)}
     </div>
     <div className="books-graph__bars">
-      {data?.books.map(book => (
+      {data?.books.map((book, index) => (
         <GraphBar
           withCaptions={withCaptions}
-          key={book.uuid}
+          key={`book-${book.uuid}-${index}`}
           stepSize={getPxStepSize({
             size: isDesktop
               ? GRAPH_DESKTOP.GRAPH_WIDTH
               : isTablet
                 ? GRAPH_TABLET.GRAPH_WIDTH
-                : window?.innerWidth > 330
-                  ? GRAPH_MOBILE.GRAPH_WIDTH
-                  : GRAPH_MOBILE_SMALL.GRAPH_WIDTH,
+                : GRAPH_MOBILE.GRAPH_WIDTH,
             count: data?.max_pages as number,
           })}
           barHeight={getPxStepSize({
@@ -114,9 +108,7 @@ const GraphBooks = ({
           ? GRAPH_DESKTOP.GRAPH_WIDTH
           : isTablet
             ? GRAPH_TABLET.GRAPH_WIDTH
-            : window?.innerWidth > 330
-              ? GRAPH_MOBILE.GRAPH_WIDTH
-              : GRAPH_MOBILE_SMALL.GRAPH_WIDTH
+            : GRAPH_MOBILE.GRAPH_WIDTH
       }
       max={data?.max_pages as number}
       quantityValue="pages"
@@ -156,9 +148,7 @@ const getGraphSteps = ({
   const MIN = 0
   const divider = isDesktop
     ? GRAPH_DESKTOP.GRAPH_BARS
-    : window?.innerWidth > 330
-      ? GRAPH_MOBILE.GRAPH_BARS
-      : GRAPH_MOBILE_SMALL.GRAPH_BARS
+    : GRAPH_MOBILE.GRAPH_BARS
   const stepVal = Math.round(max / divider)
   const steps = [MIN]
   for (let step = stepVal; step <= max; step += stepVal) {
@@ -315,7 +305,6 @@ export const YearInReviewPersonal = ({
             <p>
               <Trans i18nKey="personal_books_desc" />
             </p>
-
             <div className="personal_stats">
               <div className="personal_stats-item">
                 <Trans
@@ -379,7 +368,6 @@ export const YearInReviewPersonal = ({
               isTablet={isTablet}
             />
           </article>
-
         </>
       ) : null}
       {personal?.audiobooks_finished_count &&
@@ -393,7 +381,6 @@ export const YearInReviewPersonal = ({
                 components={{ accented: <span className="accented_orange" /> }}
               />
             </h2>
-
             <p>
               <Trans i18nKey="personal_audiobooks_desc" />
             </p>
@@ -448,12 +435,9 @@ export const YearInReviewPersonal = ({
                     ? GRAPH_DESKTOP.GRAPH_WIDTH
                     : isTablet
                       ? GRAPH_TABLET.GRAPH_WIDTH
-                      : window?.innerWidth > 330
-                        ? GRAPH_MOBILE.GRAPH_WIDTH
-                        : GRAPH_MOBILE_SMALL.GRAPH_WIDTH
+                      : GRAPH_MOBILE.GRAPH_WIDTH
                 }
               />
-
               <div
                 className="books-graph__axis-wrapper"
                 style={{
@@ -461,26 +445,22 @@ export const YearInReviewPersonal = ({
                     ? GRAPH_DESKTOP.GRAPH_WIDTH
                     : isTablet
                       ? GRAPH_TABLET.GRAPH_WIDTH
-                      : window?.innerWidth > 330
-                        ? GRAPH_MOBILE.GRAPH_WIDTH
-                        : GRAPH_MOBILE_SMALL.GRAPH_WIDTH
+                      : GRAPH_MOBILE.GRAPH_WIDTH
                     }px`,
                 }}
               >
                 {getGraphAxis(isDesktop)}
               </div>
               <div className="books-graph__bars">
-                {personal?.audiobooks_listened.audiobooks.map(audiobook => (
+                {personal?.audiobooks_listened.audiobooks.map((audiobook, index) => (
                   <GraphBar
-                    key={audiobook.uuid}
+                  key={`audiobook-${audiobook.uuid}-${index}`}
                     stepSize={getPxStepSize({
                       size: isDesktop
                         ? GRAPH_DESKTOP.GRAPH_WIDTH
                         : isTablet
                           ? GRAPH_TABLET.GRAPH_WIDTH
-                          : window?.innerWidth > 330
-                            ? GRAPH_MOBILE.GRAPH_WIDTH
-                            : GRAPH_MOBILE_SMALL.GRAPH_WIDTH,
+                          : GRAPH_MOBILE.GRAPH_WIDTH,
                       count: personal?.audiobooks_listened.max_hours as number,
                     })}
                     barHeight={getPxStepSize({
@@ -503,23 +483,18 @@ export const YearInReviewPersonal = ({
                         ? GRAPH_DESKTOP.GRAPH_WIDTH
                         : isTablet
                           ? GRAPH_TABLET.GRAPH_WIDTH
-                          : window?.innerWidth > 330
-                            ? GRAPH_MOBILE.GRAPH_WIDTH
-                            : GRAPH_MOBILE_SMALL.GRAPH_WIDTH
+                          : GRAPH_MOBILE.GRAPH_WIDTH
                     }
                   />
                 ))}
               </div>
-
               <GraphLegend
                 width={
                   isDesktop
                     ? GRAPH_DESKTOP.GRAPH_WIDTH
                     : isTablet
                       ? GRAPH_TABLET.GRAPH_WIDTH
-                      : window?.innerWidth > 330
-                        ? GRAPH_MOBILE.GRAPH_WIDTH
-                        : GRAPH_MOBILE_SMALL.GRAPH_WIDTH
+                      : GRAPH_MOBILE.GRAPH_WIDTH
                 }
                 quantityValue="hours"
                 max={personal?.audiobooks_listened.max_hours as number}
@@ -527,7 +502,6 @@ export const YearInReviewPersonal = ({
               />
             </div>
           </article>
-
         </>
       ) : null}
     </div>
@@ -546,11 +520,9 @@ export const YearInReviewPersonal = ({
           isDesktop={isDesktop}
           isTablet={isTablet}
         />
-
         <GraphBooksLengthCaption
           books={quiz?.books_length.books as YearInReviewBook[]}
         />
-
       </>
     ) : null}
   </section>)

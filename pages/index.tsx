@@ -17,6 +17,7 @@ import quiz from '/public/assets/data/quiz-data.json'
 // @ts-ignore
 import country from '/public/assets/data/country-data.json'
 import { YearInReviewGeneralData } from 'components/CountryDataShowcase'
+import { YearInReviewPersonal } from 'components/Graph'
 
 type Props = {
   userCountry: string
@@ -173,10 +174,31 @@ const Homepage = (
           setAuth,
           t,
         }} />
+      <YearInReviewPersonal {...{
+          personal,
+          quiz,
+          isDesktop: getDeviceType(typeof window !== 'undefined' ? window?.innerWidth : 900).desktop,
+          isTablet: getDeviceType(typeof window !== 'undefined' ? window?.innerWidth : 900).tablet,
+        }} />
       </main>
       <Footer />
     </>
   )
+}
+
+const getDeviceType = (width: number): Record<string, boolean> => {
+  if (width >= DEVICE_SIZES.desktopMedium) return {desktop: true, tablet: true}
+  if (width <= DEVICE_SIZES.desktop && width > DEVICE_SIZES.tablet) return {desktop: true, tablet: true}
+  if (width <= DEVICE_SIZES.tablet && width > DEVICE_SIZES.mobile) return {desktop: false, tablet: true}
+  return {desktop: false, tablet: false}
+}
+
+const DEVICE_SIZES = {
+  desktopLarge: 1600,
+  desktopMedium: 1296,
+  desktop: 1295,
+  tablet: 1023,
+  mobile: 767,
 }
 
 const LOCALE_TO_COUNTRY_CODE = {

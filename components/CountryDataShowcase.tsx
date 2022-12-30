@@ -335,7 +335,7 @@ export const YearInReviewGeneralData: FC<Props> = ({
             />
           </h2>
           <ul className="country-items__list">
-            {country.most_read_month.map(month => <li className="most-read-month">
+            {country.most_read_month.map(month => <li key={month} className="most-read-month">
               {/** @ts-ignore */}
               {t(`dates:${monthIndicesToLocaleIds[month]}`)}
             </li>)}
