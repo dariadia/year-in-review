@@ -2926,3 +2926,15 @@ screen and (min-width:1024px) and (max-width:1295px) {
   position: relative;
   display: inline-block
 }
+
+.mock-page {
+  min-height: 85vh;
+  font-size: 42px;
+  line-height: 50px;
+  margin: 24px 0 0;
+}
+
+.mock-page img {
+  display: block;
+  margin: 48px auto;
+}
