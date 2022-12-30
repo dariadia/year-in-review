@@ -23,16 +23,12 @@ const urlHelper = {
 
 const YearInReviewAuthorSample = ({
   author,
-  index,
 }: {
   author: YearInReviewAuthor
-  index: number
 }) => (
   <li className="year-in-review_author">
-    {index + 1}
-
     <a href={urlHelper.author(author.uuid)} target="_blank">
-      <img className="author-image" src="author.cover" alt={author.name} />
+      <img className="author-image" src={author.cover} alt={author.name} />
     </a>
     <a
       className="author-link"
@@ -65,10 +61,8 @@ const YearInReviewAuthorSample = ({
 
 const YearInReviewShelfSample = ({
   shelf,
-  index,
 }: {
   shelf: YearInReviewShelf
-  index: number
 }) => (
   <a
     className="year-in-review_shelf-link"
@@ -76,7 +70,6 @@ const YearInReviewShelfSample = ({
     target="_blank"
   >
     <li className="year-in-review_shelf">
-      {index}
       <div className="shelf-card__cover">
         {shelf.covers.map((cover, coverIndex) => (
           <img
@@ -112,16 +105,13 @@ const YearInReviewShelfSample = ({
 
 const YearInReviewBookSample = ({
   book,
-  index,
   children,
 }: {
   book: YearInReviewBook
-  index?: number
   children?: JSX.Element
 }) => (
   <li className="year-in-review_book">
     {children}
-    {index}
     <a href={urlHelper.book(book.uuid)} target="_blank">
       <img
         className="year-in-review_book__cover"
@@ -131,7 +121,7 @@ const YearInReviewBookSample = ({
     </a>
     <div className="book-author">
       {book.authors.map((author, authorIndex) => (
-        <span key={`author-${index}`}>
+        <span key={`author-${authorIndex}`}>
           <a href={urlHelper.author(author.uuid)} target="_blank">
             {author.name}
           </a>
@@ -173,15 +163,12 @@ const YearInReviewBookSample = ({
 
 const YearInReviewQuoteSample = ({
   quote,
-  index,
   hideLikes,
 }: {
   quote: YearInReviewQuote
-  index?: number
   hideLikes?: boolean
 }) => (
   <li className="year-in-review_quote">
-    {index && <div className="year-in-review_quote__heading">{index}</div>}
     <div
       className="year-in-review_quote__body"
       dangerouslySetInnerHTML={{ __html: quote.text }}
@@ -189,7 +176,7 @@ const YearInReviewQuoteSample = ({
 
     <div className="year-in-review_quote__book">
       {quote.authors.map((author, authorIndex) => (
-        <span key={`quote-author-${index}`}>
+        <span key={`quote-author-${authorIndex}`}>
           <a href={urlHelper.author(author.uuid)} target="_blank">
             {author.name}
           </a>
@@ -230,6 +217,7 @@ type Props = {
   userCountry: string
   auth: boolean
   setAuth: (value: boolean) => void
+  t: any
 }
 
 export const YearInReviewGeneralData: FC<Props> = ({
@@ -237,23 +225,17 @@ export const YearInReviewGeneralData: FC<Props> = ({
   userCountry,
   auth,
   setAuth,
+  t,
 }): JSX.Element => (
-  <section className="bookmate-2022__general_data">
-    {country.quotes.length && userCountry !== 'dk' ? (
+  <section className="yourcompany-2022__general_data">
+    {country.quotes.length ? (
       <>
-        <article className="bookmate-2022__general_quotes">
+        <article className="yourcompany-2022__general_quotes">
           <h2>
             <Trans
-              id="year-in-review.subh2_quotes"
-              values={{
-                country: (
-                  <span className="accented">
-                    <Trans
-                      id={`countries_locative.${userCountry}`}
-                    />
-                  </span>
-                ),
-              }}
+              i18nKey="subheading_quotes"
+              values={{ country: t(`countries_locative:${userCountry}`) }}
+              components={{ accented: <span className="accented" /> }}
             />
           </h2>
           <div className="horizontal-scroller">
@@ -262,7 +244,6 @@ export const YearInReviewGeneralData: FC<Props> = ({
                 <YearInReviewQuoteSample
                   key={`quote-${index}`}
                   quote={quote}
-                  index={index + 1}
                 />
               ))}
             </ul>
@@ -271,19 +252,12 @@ export const YearInReviewGeneralData: FC<Props> = ({
       </>
     ) : null}
     {country.authors.length ? (
-      <article className="bookmate-2022__general_authors">
+      <article className="yourcompany-2022__general_authors">
         <h2>
           <Trans
             i18nKey="subheading_authors"
-            values={{
-              country: (
-                <span className="accented">
-                  <Trans
-                    id={`countries_locative.${userCountry}`}
-                  />
-                </span>
-              ),
-            }}
+            values={{ country: t(`countries_locative:${userCountry}`) }}
+            components={{ accented: <span className="accented" /> }}
           />
         </h2>
         {/** @ts-ignore **/}
@@ -294,7 +268,6 @@ export const YearInReviewGeneralData: FC<Props> = ({
               <YearInReviewAuthorSample
                 key={`author-${index}`}
                 author={author}
-                index={index}
               />
             ))}
           </ul>
@@ -303,18 +276,12 @@ export const YearInReviewGeneralData: FC<Props> = ({
     ) : null}
     {country.books.length ? (
       <>
-        <article className="bookmate-2022__general_books">
+        <article className="yourcompany-2022__general_books">
           <h2>
             <Trans
-              id="year-in-review.subh2_books"
-              values={{
-                country: (
-                  <span className="accented">
-                    <Trans
-                      id={`countries_locative.${userCountry}`}/>
-                  </span>
-                ),
-              }}
+              i18nKey="subheading_books"
+              values={{ country: t(`countries_locative:${userCountry}`) }}
+              components={{ accented: <span className="accented" /> }}
             />
           </h2>
           <Trans i18nKey="books_lead_in" />
@@ -324,7 +291,6 @@ export const YearInReviewGeneralData: FC<Props> = ({
                 <YearInReviewBookSample
                   key={`book-${index}`}
                   book={book}
-                  index={index + 1}
                 />
               ))}
             </ul>
@@ -335,19 +301,12 @@ export const YearInReviewGeneralData: FC<Props> = ({
     ) : null}
     {country.shelves.length && userCountry !== 'rs' ? (
       <>
-        <article className="bookmate-2022__general_shelves">
+        <article className="yourcompany-2022__general_shelves">
           <h2>
             <Trans
-              id="year-in-review.subh2_shelves"
-              values={{
-                country: (
-                  <span className="accented">
-                    <Trans
-                      id={`countries_locative.${userCountry}`}
-                    />
-                  </span>
-                ),
-              }}
+              i18nKey="subheading_shelves"
+              values={{ country: t(`countries_locative:${userCountry}`) }}
+              components={{ accented: <span className="accented" /> }}
             />
           </h2>
           <Trans i18nKey="shelves_lead_in" />
@@ -357,7 +316,6 @@ export const YearInReviewGeneralData: FC<Props> = ({
                 <YearInReviewShelfSample
                   key={`shelf-${index}`}
                   shelf={shelf}
-                  index={index + 1}
                 />
               ))}
             </ul>
@@ -367,27 +325,18 @@ export const YearInReviewGeneralData: FC<Props> = ({
     ) : null}
     {country.most_read_month.length ? (
       <>
-        <article className="bookmate-2022__general_month">
+        <article className="yourcompany-2022__general_month">
           <h2>
             <Trans
-              id="year-in-review.subh2_month_read"
-              values={{
-                country: (
-                  <span className="accented">
-                    <Trans
-                      id={`countries_locative.${userCountry}`}
-                    />
-                  </span>
-                ),
-              }}
+              i18nKey="subheading_month_read"
+              values={{ country: t(`countries_locative:${userCountry}`) }}
+              components={{ accented: <span className="accented" /> }}
             />
           </h2>
           <ul className="country-items__list">
             {country.most_read_month.map(month => <li className="most-read-month">
-              <Trans
-                // @ts-ignore
-                i18nKey={monthIndicesToLocaleIds[month]}
-              />
+              {/** @ts-ignore */}
+              {t(`dates:${monthIndicesToLocaleIds[month]}`)}
             </li>)}
           </ul>
         </article>
@@ -399,7 +348,7 @@ export const YearInReviewGeneralData: FC<Props> = ({
     >
       <h3>
         <Trans
-          id="year-in-review.you_bookmate_2022"
+          i18nKey="you_yourcompany_2022"
           components={[<span />]}
         />
       </h3>
