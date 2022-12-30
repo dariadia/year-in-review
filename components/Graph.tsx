@@ -1,7 +1,7 @@
 import { isEmpty } from "lodash"
 import { FC } from "react"
 import { Trans } from "react-i18next"
-import { YearInReviewBook, YearInReviewBooks, PersonalData, QuizData } from "types/data"
+import { YearInReviewBook, YearInReviewBooks, PersonalData } from "types/data"
 import { getReducedNumber, urlHelper } from "./CountryDataShowcase"
 
 const GraphBooksLengthCaption: FC<{ books: YearInReviewBook[] }> = ({ books }) => {
@@ -267,12 +267,10 @@ const GraphBar = ({
 
 export const YearInReviewPersonal = ({
   personal,
-  quiz,
   isDesktop,
   isTablet,
 }: {
   personal?: PersonalData
-  quiz?: QuizData
   isDesktop: boolean
   isTablet: boolean
 }): JSX.Element => (
@@ -498,23 +496,4 @@ export const YearInReviewPersonal = ({
         </>
       ) : null}
     </div>
-    {!isEmpty(quiz?.books_length) ? (
-      <>
-        <h2 >
-          <Trans
-            i18nKey="reading_stats_heading"
-            components={{ accented: <span className="accented" /> }}
-          />
-        </h2>
-        <GraphBooks
-          data={quiz?.books_length as YearInReviewBooks}
-          withCaptions
-          isDesktop={isDesktop}
-          isTablet={isTablet}
-        />
-        <GraphBooksLengthCaption
-          books={quiz?.books_length.books as YearInReviewBook[]}
-        />
-      </>
-    ) : null}
   </section>)

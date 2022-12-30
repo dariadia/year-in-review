@@ -13,8 +13,6 @@ import general from '/public/assets/data/countries.json'
 // @ts-ignore
 import personal from '/public/assets/data/user-data.json'
 // @ts-ignore
-import quiz from '/public/assets/data/quiz-data.json'
-// @ts-ignore
 import country from '/public/assets/data/country-data.json'
 import { YearInReviewGeneralData } from 'components/CountryDataShowcase'
 import { YearInReviewPersonal } from 'components/Graph'
@@ -177,7 +175,6 @@ const Homepage = (
       </main>
       <YearInReviewPersonal {...{
           personal,
-          quiz,
           isDesktop: !useMediaQuery(DEVICE_SIZES.desktop),
           isTablet: !useMediaQuery(DEVICE_SIZES.mobile),
         }} />

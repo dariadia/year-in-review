@@ -16,7 +16,7 @@
                 "uuid": "NuyuW9bp"
               }
             ],
-            "hex": "#3d4a71",
+            "hex": "#3d9a71",
             "pages_count": 900,
             "kind": "book"
           },
@@ -31,7 +31,7 @@
           }
         ],
         "hex": "#f4722b",
-        "pages_count": 130,
+        "pages_count": 3130,
         "kind": "book"
       },
       {
@@ -58,8 +58,8 @@
             "uuid": "Nup2W9bp"
           }
         ],
-        "hex": "#0000ff",
-        "pages_count": 421,
+        "hex": "#F4B82C",
+        "pages_count": 1421,
         "kind": "book"
       },
       {
@@ -72,7 +72,7 @@
             "uuid": "Nuh0f9bp"
           }
         ],
-        "hex": "#3d4a71",
+        "hex": "#2CF452",
         "pages_count": 900,
         "kind": "book"
       },
@@ -86,8 +86,8 @@
             "uuid": "3kno235"
           }
         ],
-        "hex": "#669301",
-        "pages_count": 39,
+        "hex": "#BC8CD4",
+        "pages_count": 2039,
         "kind": "book"
       },
       {
@@ -101,7 +101,7 @@
           }
         ],
         "hex": "#0000ff",
-        "pages_count": 421,
+        "pages_count": 3121,
         "kind": "book"
       }
     ]
