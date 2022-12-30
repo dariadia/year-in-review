@@ -6,7 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
-import { useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { Event } from 'types/data'
 // @ts-ignore
 import general from '/public/assets/data/countries.json'
@@ -178,20 +178,31 @@ const Homepage = (
       <YearInReviewPersonal {...{
           personal,
           quiz,
-          isDesktop: getDeviceType(typeof window !== 'undefined' ? window?.innerWidth : 900).desktop,
-          isTablet: getDeviceType(typeof window !== 'undefined' ? window?.innerWidth : 900).tablet,
+          isDesktop: !useMediaQuery(DEVICE_SIZES.desktop),
+          isTablet: !useMediaQuery(DEVICE_SIZES.mobile),
         }} />
       <Footer />
     </>
   )
 }
 
-const getDeviceType = (width: number): Record<string, boolean> => {
-  if (width >= DEVICE_SIZES.desktopMedium) return {desktop: true, tablet: true}
-  if (width <= DEVICE_SIZES.desktop && width > DEVICE_SIZES.tablet) return {desktop: true, tablet: true}
-  if (width <= DEVICE_SIZES.tablet && width > DEVICE_SIZES.mobile) return {desktop: false, tablet: true}
-  return {desktop: false, tablet: false}
-}
+const useMediaQuery = (width: number) => {
+  const [targetReached, setTargetReached] = useState(false);
+  const updateTarget = useCallback((e: any) => setTargetReached(e.matches), []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addListener(updateTarget);
+
+    if (media.matches) {
+      setTargetReached(true);
+    }
+
+    return () => media.removeListener(updateTarget);
+  }, []);
+
+  return targetReached;
+};
 
 const DEVICE_SIZES = {
   desktopLarge: 1600,
