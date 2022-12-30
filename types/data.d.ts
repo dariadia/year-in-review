@@ -26,7 +26,7 @@ export type YearInReviewQuote = {
   uuid: string
   text: string
   book: { title: string; uuid: string; kind: BookOrSerial }
-  authors: { name: string; uuid: string }[]
+  authors: { author_name: string; uuid: string }[]
   likes_count: number
 }
 
@@ -44,7 +44,7 @@ export type YearInReviewBook = {
   cover: string
   title: string
   name?: string
-  authors: { name: string; uuid: string }[]
+  authors: { author_name: string; uuid: string }[]
   kind: BookOrSerial
   readers_count: number
   quotes_count: number
@@ -61,7 +61,7 @@ export type YearInReviewAudiobook = {
   uuid: string
   cover: string
   title: string
-  authors: { name: string; uuid: string }[]
+  authors: { author_name: string; uuid: string }[]
   listeners_count: number
   impressions_count: number
   hex?: string
@@ -143,14 +143,14 @@ export type QuizData = {
     recent: {
       text: string
       uuid: string
-      authors: { name: string; uuid: string }[]
+      authors: { author_name: string; uuid: string }[]
       book: { title: string; kind: BookOrSerial; uuid: string }
       likes_count: number
     }
     most_likes: {
       text: string
       uuid: string
-      authors: { name: string; uuid: string }[]
+      authors: { author_name: string; uuid: string }[]
       book: { title: string; kind: BookOrSerial; uuid: string }
       likes_count: number
     }

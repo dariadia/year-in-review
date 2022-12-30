@@ -28,7 +28,7 @@ const YearInReviewAuthorSample = ({
 }) => (
   <li className="year-in-review_author">
     <a href={urlHelper.author(author.uuid)} target="_blank">
-      <img className="author-image" src={author.cover} alt={author.name} />
+      <img className="author-image" src={author.cover} alt={author.author_name} />
     </a>
     <a
       className="author-link"
@@ -123,7 +123,7 @@ const YearInReviewBookSample = ({
       {book.authors.map((author, authorIndex) => (
         <span key={`author-${authorIndex}`}>
           <a href={urlHelper.author(author.uuid)} target="_blank">
-            {author.name}
+            {author.author_name}
           </a>
           {authorIndex < book.authors.length - 1 && ', '}
         </span>
@@ -173,12 +173,11 @@ const YearInReviewQuoteSample = ({
       className="year-in-review_quote__body"
       dangerouslySetInnerHTML={{ __html: quote.text }}
     />
-
     <div className="year-in-review_quote__book">
       {quote.authors.map((author, authorIndex) => (
         <span key={`quote-author-${authorIndex}`}>
           <a href={urlHelper.author(author.uuid)} target="_blank">
-            {author.name}
+            {author.author_name}
           </a>
           {authorIndex < quote.authors.length - 1 && ', '}
         </span>
@@ -190,7 +189,7 @@ const YearInReviewQuoteSample = ({
     </div>
     {!hideLikes ? (
       <div className="year-in-review_quote__likes">
-        ❤︎
+        ❤︎{' '}
         {getReducedNumber(quote.likes_count)}
       </div>
     ) : null}
@@ -261,7 +260,7 @@ export const YearInReviewGeneralData: FC<Props> = ({
           />
         </h2>
         {/** @ts-ignore **/}
-        <Trans i18nKey="authors_lead_in" />
+        <p className="lead-in"><Trans i18nKey="authors_lead_in" /></p>
         <div className="horizontal-scroller">
           <ul className="country-items__list">
             {country.authors.map((author, index) => (
@@ -284,7 +283,7 @@ export const YearInReviewGeneralData: FC<Props> = ({
               components={{ accented: <span className="accented" /> }}
             />
           </h2>
-          <Trans i18nKey="books_lead_in" />
+          <p className="lead-in"><Trans i18nKey="books_lead_in" /></p>
           <div className="horizontal-scroller">
             <ul className="country-items__list">
               {country.books.map((book, index) => (
@@ -309,7 +308,7 @@ export const YearInReviewGeneralData: FC<Props> = ({
               components={{ accented: <span className="accented" /> }}
             />
           </h2>
-          <Trans i18nKey="shelves_lead_in" />
+          <p className="lead-in"><Trans i18nKey="shelves_lead_in" /></p>
           <div className="horizontal-scroller">
             <ul className="country-items__list">
               {country.shelves.map((shelf, index) => (
@@ -349,7 +348,7 @@ export const YearInReviewGeneralData: FC<Props> = ({
       <h3>
         <Trans
           i18nKey="you_yourcompany_2022"
-          components={[<span />]}
+          components={{ accented: <span className="accented-dark" /> }}
         />
       </h3>
       <p>
@@ -363,11 +362,6 @@ export const YearInReviewGeneralData: FC<Props> = ({
           <button onClick={() => setAuth(true)}><Trans i18nKey="login" /></button>
         </>
       )}
-      <img
-        className="banner__decor"
-        src="https://a.bmstatic.com/iu/74/195/Frame 12-0c853f5eaacd5c68ca28c2ce3469a24c.svg"
-        alt="decor"
-      />
     </div>
     {!auth ? <div className="black-padding" /> : null}
   </section>
