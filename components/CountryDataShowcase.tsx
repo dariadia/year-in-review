@@ -231,6 +231,7 @@ export const YearInReviewGeneralData: FC<Props> = ({
       <>
         <article className="yourcompany-2022__general_quotes">
           <h2>
+            {/** @ts-ignore */}
             <Trans
               i18nKey="subheading_quotes"
               values={{ country: t(`countries_locative:${userCountry}`) }}
