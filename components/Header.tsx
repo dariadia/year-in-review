@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { TFunction, useTranslation } from 'next-i18next'
+import { TFunction, Trans, useTranslation } from 'next-i18next'
 import { FC } from 'react'
 import omit from 'lodash/omit'
 
@@ -67,9 +67,23 @@ const LaguageSwitcher = () => (
   </div>
 )
 
-type Props = { activeTab: string, activeTabLabel: string, general: GeneralData, country: string }
+type Props = { 
+  activeTab: string
+  activeTabLabel: string
+  general: GeneralData
+  country: string
+  auth: boolean
+  setAuth: (value: boolean) => void 
+}
 
-export const Header: FC<Props> = ({ activeTab, activeTabLabel, general, country }) => {
+export const Header: FC<Props> = ({ 
+  activeTab, 
+  activeTabLabel, 
+  general, 
+  country, 
+  auth,
+  setAuth
+ }) => {
   /* @ts-ignore */
   // It's a react-i18next: v12+ bug https://github.com/i18next/react-i18next/issues/1601
   const { t } = useTranslation(['common', 'countries'])
@@ -153,13 +167,14 @@ export const Header: FC<Props> = ({ activeTab, activeTabLabel, general, country 
           JSON.stringify(mapCountriesData(general.countries, t)),
           activeTab,
           // @ts-ignore
-          t(`common:caption_${activeTabLabel}`, {formattedCount: '', count: general.countries[country.toLowerCase()][activeTab]}),
+          t(`common:caption_${activeTabLabel}`, { formattedCount: '', count: general.countries[country.toLowerCase()][activeTab] }),
         )}
       </script>
     </Head>
     <header>
-      <div>
-        <div className="logo_header user-avatar_header" />
+      <div className='icons_header'>
+        {auth && <div className="logo_header user-avatar_header" />}
+        {!auth && <button onClick={() => setAuth(true)}><Trans i18nKey="login" /></button>}
         <div className="logo_header your-company-logo_header" />
       </div>
       <LaguageSwitcher />

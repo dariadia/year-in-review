@@ -6,17 +6,16 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
-import { useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { Event } from 'types/data'
 // @ts-ignore
 import general from '/public/assets/data/countries.json'
 // @ts-ignore
 import personal from '/public/assets/data/user-data.json'
 // @ts-ignore
-import quiz from '/public/assets/data/quiz-data.json'
-// @ts-ignore
 import country from '/public/assets/data/country-data.json'
 import { YearInReviewGeneralData } from 'components/CountryDataShowcase'
+import { YearInReviewPersonal } from 'components/Graph'
 
 type Props = {
   userCountry: string
@@ -45,7 +44,7 @@ const Homepage = (
 
   return (
     <>
-      <Header {...{ activeTab, activeTabLabel, general, country: _props.userCountry }} />
+      <Header {...{ auth: isAuth, setAuth, activeTab, activeTabLabel, general, country: _props.userCountry }} />
       <main>
         <h1>
           {t('common:year_in_review_heading')}
@@ -174,9 +173,40 @@ const Homepage = (
           t,
         }} />
       </main>
+      <YearInReviewPersonal {...{
+          personal,
+          isDesktop: !useMediaQuery(DEVICE_SIZES.desktop),
+          isTablet: !useMediaQuery(DEVICE_SIZES.mobile),
+        }} />
       <Footer />
     </>
   )
+}
+
+const useMediaQuery = (width: number) => {
+  const [targetReached, setTargetReached] = useState(false);
+  const updateTarget = useCallback((e: any) => setTargetReached(e.matches), []);
+
+  useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addListener(updateTarget);
+
+    if (media.matches) {
+      setTargetReached(true);
+    }
+
+    return () => media.removeListener(updateTarget);
+  }, []);
+
+  return targetReached;
+};
+
+const DEVICE_SIZES = {
+  desktopLarge: 1600,
+  desktopMedium: 1296,
+  desktop: 1295,
+  tablet: 1023,
+  mobile: 767,
 }
 
 const LOCALE_TO_COUNTRY_CODE = {
