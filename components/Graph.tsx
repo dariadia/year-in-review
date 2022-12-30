@@ -101,7 +101,6 @@ const GraphBooks = ({
         />
       ))}
     </div>
-
     <GraphLegend
       width={
         isDesktop
@@ -172,8 +171,8 @@ const GraphLegend = ({
     {getGraphSteps({
       max,
       isDesktop,
-    }).map(step => (
-      <span className="books-graph__step-label" key={`graph-step-${step}`}>
+    }).map((step, index) => (
+      <span className="books-graph__step-label" key={`graph-step-${step}-${index}`}>
         {quantityValue === 'hours' && step}{' '}
         <Trans
           id={`year-in-review.${quantityValue}`}
@@ -246,7 +245,7 @@ const GraphBar = ({
             <img src={cover} alt={title} className="bar__resource-cover" />
             <div className="books-graph__bar__tooltip-body">
               {authors.map((author, index) => (
-                <span key={`${author}-${index}`}>
+                <span key={`${author.uuid}-${index}`}>
                   <span>{author.author_name}</span>
                   {index < authors.length - 1 && ', '}
                 </span>
@@ -357,7 +356,6 @@ export const YearInReviewPersonal = ({
                 </div>
               </div>
             </div>
-
             <GraphBooks
               data={personal?.books_read as YearInReviewBooks}
               isDesktop={isDesktop}
@@ -420,7 +418,6 @@ export const YearInReviewPersonal = ({
                 </div>
               </div>
             </div>
-
             <div className="books-graph">
               <GraphLegend
                 max={personal?.audiobooks_listened.max_hours as number}
@@ -450,7 +447,7 @@ export const YearInReviewPersonal = ({
               <div className="books-graph__bars">
                 {personal?.audiobooks_listened.audiobooks.map((audiobook, index) => (
                   <GraphBar
-                  key={`audiobook-${audiobook.uuid}-${index}`}
+                  key={`${audiobook.uuid}-${index}-audiobook`}
                     stepSize={getPxStepSize({
                       size: isDesktop
                         ? GRAPH_DESKTOP.GRAPH_WIDTH
@@ -509,7 +506,6 @@ export const YearInReviewPersonal = ({
             components={{ accented: <span className="accented" /> }}
           />
         </h2>
-
         <GraphBooks
           data={quiz?.books_length as YearInReviewBooks}
           withCaptions

@@ -1,1 +1,225 @@
-{"books_finished_count":333,"pages_read":21940124,"hours_read":423104,"books_read":{"min_pages":10,"max_pages":4024,"books":[{"uuid":"hpP4BJ2m","cover":"https://assets1.bmstatic.com/assets/books-covers/0a/73/hpP4BJ2m-ipad.jpg","title":"Book of Destiny","authors":[{"author_name":"Barbara Meiklejohn-Free","uuid":"G9WQKuJZ"}],"hex":"#f4722b","pages_count":130,"kind":"book"},{"uuid":"qH8BYcdu","cover":"https://assets1.bmstatic.com/assets/books-covers/69/73/qH8BYcdu-ipad.jpg","title":"The Search","authors":[{"author_name":"Osho","uuid":"some-uuid"}],"hex":"#955265","pages_count":4024,"kind":"book"},{"uuid":"zCzwQcKD","cover":"https://assets1.bmstatic.com/assets/books-covers/4b/1d/ipad-35de871503973de5fed53c2758384104.jpeg","title":"Full Moon","authors":[{"author_name":"P. G. Wodehouse","uuid":"NuhuW9bp"}],"hex":"#3d4a71","pages_count":900,"kind":"book"},{"uuid":"YW60Y6Ef","cover":"https://assets1.bmstatic.com/assets/books-covers/f3/4d/ipad-2a133ceb4a7328b3b6c16fa4171be044.jpg","title":"Der Pflug des Zorns","authors":[{"author_name":"Maria Helleberg","uuid":"some-uuid"}],"hex":"#669301","pages_count":39,"kind":"book"},{"uuid":"xzQKUIGT","cover":"https://assets1.bmstatic.com/assets/books-covers/83/a8/ipad-768c647ec826a0470f56ecc0a55a1028.jpg","title":"Die Katze, die nicht sterben wollte","authors":[{"author_name":"Inger Frimansson","uuid":"NuhuW9bp"}],"hex":"#0000ff","pages_count":421,"kind":"book"}]},"audiobooks_finished_count":14,"hours_listened":25,"audiobooks_listened":{"min_hours":3,"max_hours":25,"audiobooks":[{"cover":"https://assets1.bmstatic.com/assets/audiobooks-covers/88/cc/DG7T9I65-large.jpeg?image_hash=fcca59633ac111fa55433e8661166df8","hex":"#133337","authors":[{"author_name":"Julie Murphy","uuid":"NuhuW9bp"}],"title":"Dumplin","uuid":"DG7T9I65","hours":25},{"cover":"https://assets1.bmstatic.com/assets/audiobooks-covers/2b/27/ETSRnMY3-large.jpeg?image_hash=dd03a48a33106b004662632af1afe623","hex":"#d1c492","authors":[{"author_name":"Sara Johnsen","uuid":"NuhuW9bp"}],"title":"White Man","uuid":"ETSRnMY3","hours":13},{"cover":"https://assets1.bmstatic.com/assets/audiobooks-covers/6d/0d/NexC3YJJ-large.jpeg?image_hash=895587ca3d9336c4b19786d279a29f24","hex":"#d9534f","authors":[{"author_name":"Oscar Wilde","uuid":"kPvRfD9F"}],"title":"Das Bildnis des Dorian Gray","uuid":"NexC3YJJ","hours":10},{"cover":"https://assets1.bmstatic.com/assets/audiobooks-covers/ff/04/RU4O5jqn-large.jpeg?image_hash=c3f3d76f17601a0c4e5ae55597180665","hex":"#cc5500","authors":[{"author_name":"Lew Tolstoi","uuid":"kPvRfD9F"},{"author_name":"Stunt Lew","uuid":"kPvRfD9F"}],"title":"Die Kreutzersonate","uuid":"RU4O5jqn","hours":21},{"cover":"https://assets1.bmstatic.com/assets/audiobooks-covers/b8/f6/gFWmjeyN-large.jpeg?image_hash=ac2a56f66c497109360cb80e5ccbca2d","hex":"#b6c0b3","authors":[{"author_name":"Pere Romanillos","uuid":"kPvRfD9F"}],"title":"Die großen Irrtümer der Menschheit","uuid":"gFWmjeyN","hours":8},{"cover":"https://assets1.bmstatic.com/assets/audiobooks-covers/88/cc/DG7T9I65-large.jpeg?image_hash=fcca59633ac111fa55433e8661166df8","hex":"#729d2a","authors":[{"author_name":"Julie Murphy","uuid":"NuhuW9bp"}],"title":"Dumplin","uuid":"DG7T9I65","hours":12},{"cover":"https://assets1.bmstatic.com/assets/audiobooks-covers/2b/27/ETSRnMY3-large.jpeg?image_hash=dd03a48a33106b004662632af1afe623","hex":"#51cbf8","authors":[{"author_name":"Sara Johnsen","uuid":"NuhuW9bp"}],"title":"White Man","uuid":"ETSRnMY3","hours":11},{"cover":"https://assets1.bmstatic.com/assets/audiobooks-covers/6d/0d/NexC3YJJ-large.jpeg?image_hash=895587ca3d9336c4b19786d279a29f24","hex":"#13dca3","authors":[{"author_name":"Oscar Wilde","uuid":"kPvRfD9F"}],"title":"Das Bildnis des Dorian Gray","uuid":"NexC3YJJ","hours":18}]}}
+{
+  "books_finished_count": 333,
+  "pages_read": 21940124,
+  "hours_read": 423104,
+  "books_read": {
+    "min_pages": 10,
+    "max_pages": 4024,
+    "books": [
+        {
+            "uuid": "rjoyw93d",
+            "cover": "https://assets1.bmstatic.com/assets/books-covers/4b/1d/ipad-35de871503973de5fed53c2758384104.jpeg",
+            "title": "Full Moon",
+            "authors": [
+              {
+                "author_name": "P. G. Wodehouse",
+                "uuid": "NuyuW9bp"
+              }
+            ],
+            "hex": "#3d4a71",
+            "pages_count": 900,
+            "kind": "book"
+          },
+      {
+        "uuid": "hpP4Bz2m",
+        "cover": "https://assets1.bmstatic.com/assets/books-covers/0a/73/hpP4BJ2m-ipad.jpg",
+        "title": "Book of Destiny",
+        "authors": [
+          {
+            "author_name": "Barbara Meiklejohn-Free",
+            "uuid": "G9WqKuJZ"
+          }
+        ],
+        "hex": "#f4722b",
+        "pages_count": 130,
+        "kind": "book"
+      },
+      {
+        "uuid": "qH8BY3du",
+        "cover": "https://assets1.bmstatic.com/assets/books-covers/69/73/qH8BYcdu-ipad.jpg",
+        "title": "The Search",
+        "authors": [
+          {
+            "author_name": "Osho",
+            "uuid": "ewoewnf9"
+          }
+        ],
+        "hex": "#955265",
+        "pages_count": 4024,
+        "kind": "book"
+      },
+      {
+        "uuid": "xzQKUgGT",
+        "cover": "https://assets1.bmstatic.com/assets/books-covers/83/a8/ipad-768c647ec826a0470f56ecc0a55a1028.jpg",
+        "title": "Die Katze, die nicht sterben wollte",
+        "authors": [
+          {
+            "author_name": "Inger Frimansson",
+            "uuid": "Nup2W9bp"
+          }
+        ],
+        "hex": "#0000ff",
+        "pages_count": 421,
+        "kind": "book"
+      },
+      {
+        "uuid": "zCz0scKD",
+        "cover": "https://assets1.bmstatic.com/assets/books-covers/4b/1d/ipad-35de871503973de5fed53c2758384104.jpeg",
+        "title": "The Moon",
+        "authors": [
+          {
+            "author_name": "P. G. Wodehouse",
+            "uuid": "Nuh0f9bp"
+          }
+        ],
+        "hex": "#3d4a71",
+        "pages_count": 900,
+        "kind": "book"
+      },
+      {
+        "uuid": "YW6006Ef",
+        "cover": "https://assets1.bmstatic.com/assets/books-covers/f3/4d/ipad-2a133ceb4a7328b3b6c16fa4171be044.jpg",
+        "title": "Der Pflug des Zorns",
+        "authors": [
+          {
+            "author_name": "Maria Helleberg",
+            "uuid": "3kno235"
+          }
+        ],
+        "hex": "#669301",
+        "pages_count": 39,
+        "kind": "book"
+      },
+      {
+        "uuid": "xzQpUsgT",
+        "cover": "https://assets1.bmstatic.com/assets/books-covers/83/a8/ipad-768c647ec826a0470f56ecc0a55a1028.jpg",
+        "title": "Die Katze, die nicht sterben wollte",
+        "authors": [
+          {
+            "author_name": "Inger Frimansson",
+            "uuid": "Nuhut29bp"
+          }
+        ],
+        "hex": "#0000ff",
+        "pages_count": 421,
+        "kind": "book"
+      }
+    ]
+  },
+  "audiobooks_finished_count": 14,
+  "hours_listened": 25,
+  "audiobooks_listened": {
+    "min_hours": 3,
+    "max_hours": 25,
+    "audiobooks": [
+      {
+        "cover": "https://assets1.bmstatic.com/assets/audiobooks-covers/88/cc/DG7T9I65-large.jpeg?image_hash=fcca59633ac111fa55433e8661166df8",
+        "hex": "#133337",
+        "authors": [
+          {
+            "author_name": "Julie Murphy",
+            "uuid": "Nuh4gW9bp"
+          }
+        ],
+        "title": "Dumplin",
+        "uuid": "DG7p9Ik5",
+        "hours": 25
+      },
+      {
+        "cover": "https://assets1.bmstatic.com/assets/audiobooks-covers/2b/27/ETSRnMY3-large.jpeg?image_hash=dd03a48a33106b004662632af1afe623",
+        "hex": "#d1c492",
+        "authors": [
+          {
+            "author_name": "Sara Johnsen",
+            "uuid": "NuhpsW9bp"
+          }
+        ],
+        "title": "White Man",
+        "uuid": "ETSRne2YL",
+        "hours": 13
+      },
+      {
+        "cover": "https://assets1.bmstatic.com/assets/audiobooks-covers/6d/0d/NexC3YJJ-large.jpeg?image_hash=895587ca3d9336c4b19786d279a29f24",
+        "hex": "#d9534f",
+        "authors": [
+          {
+            "author_name": "Oscar Wilde",
+            "uuid": "kPvRfps9F"
+          }
+        ],
+        "title": "Das Bildnis des Dorian Gray",
+        "uuid": "NexC3fpM",
+        "hours": 10
+      },
+      {
+        "cover": "https://assets1.bmstatic.com/assets/audiobooks-covers/ff/04/RU4O5jqn-large.jpeg?image_hash=c3f3d76f17601a0c4e5ae55597180665",
+        "hex": "#cc5500",
+        "authors": [
+          {
+            "author_name": "Lew Tolstoi",
+            "uuid": "kP3RfD9F"
+          },
+          {
+            "author_name": "Stunt Lew",
+            "uuid": "kPvkfD9F"
+          }
+        ],
+        "title": "Die Kreutzersonate",
+        "uuid": "RU4O5lqw",
+        "hours": 21
+      },
+      {
+        "cover": "https://assets1.bmstatic.com/assets/audiobooks-covers/b8/f6/gFWmjeyN-large.jpeg?image_hash=ac2a56f66c497109360cb80e5ccbca2d",
+        "hex": "#b6c0b3",
+        "authors": [
+          {
+            "author_name": "Pere Romanillos",
+            "uuid": "kPvpfD9F"
+          }
+        ],
+        "title": "Die großen Irrtümer der Menschheit",
+        "uuid": "gFWlfeyt",
+        "hours": 8
+      },
+      {
+        "cover": "https://assets1.bmstatic.com/assets/audiobooks-covers/88/cc/DG7T9I65-large.jpeg?image_hash=fcca59633ac111fa55433e8661166df8",
+        "hex": "#729d2a",
+        "authors": [
+          {
+            "author_name": "Julie Murphy",
+            "uuid": "Nuhupfbp"
+          }
+        ],
+        "title": "Dumplin",
+        "uuid": "DG7TpfwI6d",
+        "hours": 12
+      },
+      {
+        "cover": "https://assets1.bmstatic.com/assets/audiobooks-covers/2b/27/ETSRnMY3-large.jpeg?image_hash=dd03a48a33106b004662632af1afe623",
+        "hex": "#51cbf8",
+        "authors": [
+          {
+            "author_name": "Sara Johnsen",
+            "uuid": "Nuhlfw9bp"
+          }
+        ],
+        "title": "White Man",
+        "uuid": "ETSfwkMYp",
+        "hours": 11
+      },
+      {
+        "cover": "https://assets1.bmstatic.com/assets/audiobooks-covers/6d/0d/NexC3YJJ-large.jpeg?image_hash=895587ca3d9336c4b19786d279a29f24",
+        "hex": "#13dca3",
+        "authors": [
+          {
+            "author_name": "Oscar Wilde",
+            "uuid": "kPvRkwf9F"
+          }
+        ],
+        "title": "Das Bildnis des Dorian Gray",
+        "uuid": "NexCpf2Ji",
+        "hours": 18
+      }
+    ]
+  }
+}
