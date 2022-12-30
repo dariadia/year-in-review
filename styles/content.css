@@ -696,10 +696,6 @@ ul {
     padding: 40px 20px;
     border-radius: 0
   }
-
-  .year-in-review__banner.banner-uncaptioned {
-    height: 220px
-  }
 }
 
 .year-in-review__banner .button_inline {
@@ -725,6 +721,17 @@ ul {
 .yourcompany-2022__personal {
   background: var(--secondary);
   padding-bottom: 48px;
+}
+
+.icons_header {
+  display: flex;
+  align-items: center;
+}
+
+.icons_header > button {
+  margin-right: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
 }
 
 .yourcompany-2022__personal .yourcompany-2022__column {

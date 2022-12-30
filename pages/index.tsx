@@ -44,7 +44,7 @@ const Homepage = (
 
   return (
     <>
-      <Header {...{ activeTab, activeTabLabel, general, country: _props.userCountry }} />
+      <Header {...{ auth: isAuth, setAuth, activeTab, activeTabLabel, general, country: _props.userCountry }} />
       <main>
         <h1>
           {t('common:year_in_review_heading')}

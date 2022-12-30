@@ -361,6 +361,7 @@ export const YearInReviewGeneralData: FC<Props> = ({
           <p>
             <Trans i18nKey="banner_hint" />
           </p>
+          {/** @ts-ignore */}
           <button onClick={() => setAuth(true)}><Trans i18nKey="login" /></button>
         </>
       )}
