@@ -724,6 +724,7 @@ ul {
 
 .yourcompany-2022__personal {
   background: var(--secondary);
+  padding-bottom: 48px;
 }
 
 .yourcompany-2022__personal .yourcompany-2022__column {
@@ -804,7 +805,8 @@ ul {
 
 .books-graph__legend {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
+  padding-top: 20px;
 }
 
 .books-graph__step-label {
@@ -826,7 +828,7 @@ ul {
 
 .books-graph__bars {
   position: absolute;
-  top: 40px
+  top: 55px;
 }
 
 .yourcompany-2022__personal_quiz .quiz__label>input,
@@ -858,7 +860,7 @@ screen and (min-width:768px) and (max-width:1023px) {
   position: absolute;
   align-items: center;
   box-sizing: border-box;
-  background-color: #f4f2ef;
+  background-color: var(--main);
   width: fit-content;
   min-width: 204px;
   min-height: 116px;
@@ -866,6 +868,14 @@ screen and (min-width:768px) and (max-width:1023px) {
   padding: 8px 16px 8px 8px;
   font-size: 10px;
   line-height: 12px
+}
+
+.lead-in-year {
+  margin: 24px 0 64px;
+}
+
+.lead-in-books {
+  margin: 24px 0;
 }
 
 .books-graph__bar:hover .books-graph__bar__tooltip>img {

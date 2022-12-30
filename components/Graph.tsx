@@ -4,28 +4,6 @@ import { Trans } from "react-i18next"
 import { YearInReviewBook, YearInReviewBooks, PersonalData } from "types/data"
 import { getReducedNumber, urlHelper } from "./CountryDataShowcase"
 
-const GraphBooksLengthCaption: FC<{ books: YearInReviewBook[] }> = ({ books }) => {
-  const longestBook = books.find(book => book.label === 'longest_book')
-  const shortestBook = books.find(book => book.label === 'shortest_book')
-  {/** @ts-ignore */ }
-  return (<Trans
-    i18nKey="reading_stats_desc"
-    values={{
-      authorLongestBook: longestBook?.authors
-        .map(author => author.author_name)
-        .join(', '),
-      titleLongestBook: longestBook?.title,
-      pagesLongestBook: longestBook?.pages_count,
-      authorShortestBook: shortestBook?.authors
-        .map(author => author.author_name)
-        .join(', '),
-      titleShortestBook: shortestBook?.title,
-      pagesShortestBook: shortestBook?.pages_count,
-    }}
-  />
-  )
-}
-
 const GraphBooks = ({
   data,
   withCaptions,
@@ -44,7 +22,7 @@ const GraphBooks = ({
           ? GRAPH_DESKTOP.GRAPH_WIDTH
           : isTablet
             ? GRAPH_TABLET.GRAPH_WIDTH
-            : GRAPH_MOBILE.GRAPH_WIDTH 
+            : GRAPH_MOBILE.GRAPH_WIDTH
       }
       max={data?.max_pages as number}
       quantityValue="pages"
@@ -175,8 +153,8 @@ const GraphLegend = ({
       <span className="books-graph__step-label" key={`graph-step-${step}-${index}`}>
         {quantityValue === 'hours' && step}{' '}
         <Trans
-          id={`year-in-review.${quantityValue}`}
-          values={{ count: step }}
+          i18nKey={quantityValue}
+          count={step}
         />
       </span>
     ))}
@@ -258,7 +236,8 @@ const GraphBar = ({
       </div>
       {withCaptions && (
         <div className="bar-caption">
-          <Trans id={`year-in-review.${label}`} />
+          {/** @ts-ignore */}
+          <Trans i18nKey={label} />
         </div>
       )}
     </>
@@ -282,8 +261,8 @@ export const YearInReviewPersonal = ({
           components={{ accented: <span className="accented" /> }}
         />
       </h2>
-      <p>
-        <Trans id="year-in-review.personal_lead_in" />
+      <p className="lead-in-year">
+        <Trans i18nKey="personal_lead_in" />
       </p>
       {personal?.books_finished_count &&
         personal.books_read.books.length > 1 ? (
@@ -295,18 +274,14 @@ export const YearInReviewPersonal = ({
                 components={{ accented: <span className="accented" /> }}
               />
             </h2>
-            <p>
+            <p className="lead-in-books">
               <Trans i18nKey="personal_books_desc" />
             </p>
             <div className="personal_stats">
               <div className="personal_stats-item">
                 <Trans
                   i18nKey="finished_books"
-                  values={{
-                    count: getReducedNumber(
-                      personal?.books_finished_count as number,
-                    ),
-                  }}
+                  count={personal?.books_finished_count}
                 />
                 <div className="personal_stats__wrapper">
                   <img
@@ -322,7 +297,7 @@ export const YearInReviewPersonal = ({
               <div className="personal_stats-item">
                 <Trans
                   i18nKey="pages_read"
-                  values={{ count: personal?.pages_read }}
+                  count={personal?.pages_read}
                 />
                 <div className="personal_stats__wrapper">
                   <img
@@ -339,7 +314,7 @@ export const YearInReviewPersonal = ({
                 <span className="text_capitalised">
                   <Trans
                     i18nKey="hours"
-                    values={{ count: personal?.hours_read }}
+                    count={personal?.hours_read}
                   />
                 </span>
                 <div className="personal_stats__wrapper">
@@ -380,11 +355,7 @@ export const YearInReviewPersonal = ({
               <div className="personal_stats-item">
                 <Trans
                   i18nKey="finished_audiobooks"
-                  values={{
-                    count: getReducedNumber(
-                      personal?.audiobooks_finished_count as number,
-                    ),
-                  }}
+                  count={personal?.audiobooks_finished_count}
                 />
                 <div className="personal_stats__wrapper">
                   <img
@@ -401,7 +372,7 @@ export const YearInReviewPersonal = ({
                 <span className="text_capitalised">
                   <Trans
                     i18nKey="hours"
-                    values={{ count: personal?.hours_listened }}
+                    count={personal?.hours_listened}
                   />
                 </span>
                 <div className="personal_stats__wrapper">
@@ -445,7 +416,7 @@ export const YearInReviewPersonal = ({
               <div className="books-graph__bars">
                 {personal?.audiobooks_listened.audiobooks.map((audiobook, index) => (
                   <GraphBar
-                  key={`${audiobook.uuid}-${index}-audiobook`}
+                    key={`${audiobook.uuid}-${index}-audiobook`}
                     stepSize={getPxStepSize({
                       size: isDesktop
                         ? GRAPH_DESKTOP.GRAPH_WIDTH
