@@ -245,7 +245,7 @@ const GraphBar = ({
             <img src={cover} alt={title} className="bar__resource-cover" />
             <div className="books-graph__bar__tooltip-body">
               {authors.map((author, index) => (
-                <span key={`${author.uuid}-${index}`}>
+                <span key={`${author.uuid}-${author.author_name}-${index}`}>
                   <span>{author.author_name}</span>
                   {index < authors.length - 1 && ', '}
                 </span>
