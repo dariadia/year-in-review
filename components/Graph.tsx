@@ -153,6 +153,7 @@ const GraphLegend = ({
       <span className="books-graph__step-label" key={`graph-step-${step}-${index}`}>
         {quantityValue === 'hours' && step}{' '}
         <Trans
+          // @ts-ignore
           i18nKey={quantityValue}
           count={step}
         />
