@@ -1,0 +1,17 @@
+{
+  "month": "mjesec",
+  "date": "datum",
+  "year": "godina",
+  "full_date_jan": "Siječanj",
+  "full_date_feb": "Veljača",
+  "full_date_mar": "Ožujak",
+  "full_date_apr": "Travanj",
+  "full_date_may": "Svibanj",
+  "full_date_jun": "Lipanj",
+  "full_date_jul": "Srpanj",
+  "full_date_aug": "Kolovoz",
+  "full_date_sep": "Rujan",
+  "full_date_oct": "Listopad",
+  "full_date_nov": "Studeni",
+  "full_date_dec": "Prosinac"
+}

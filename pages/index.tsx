@@ -190,7 +190,8 @@ export const getStaticProps: GetStaticProps<Props> = async ({
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'countries',
-        'countries_locative'
+        'countries_locative',
+        'dates',
       ])),
     },
   })

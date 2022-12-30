@@ -1,0 +1,17 @@
+{
+  "month": "måned",
+  "date": "dato",
+  "year": "år",
+  "full_date_jan": "Januar",
+  "full_date_feb": "Februar",
+  "full_date_mar": "Marts",
+  "full_date_apr": "April",
+  "full_date_may": "Maj",
+  "full_date_jun": "Juni",
+  "full_date_jul": "Juli",
+  "full_date_aug": "August",
+  "full_date_sep": "September",
+  "full_date_oct": "Oktober",
+  "full_date_nov": "November",
+  "full_date_dec": "December"
+}

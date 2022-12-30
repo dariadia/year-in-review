@@ -1,0 +1,17 @@
+{
+  "month": "mesec",
+  "date": "datum",
+  "year": "godina",
+  "full_date_jan": "Januar",
+  "full_date_feb": "Februar",
+  "full_date_mar": "Mart",
+  "full_date_apr": "April",
+  "full_date_may": "Maj",
+  "full_date_jun": "Jun",
+  "full_date_jul": "Jul",
+  "full_date_aug": "Avgust",
+  "full_date_sep": "Septembar",
+  "full_date_oct": "Oktobar",
+  "full_date_nov": "Novembar",
+  "full_date_dec": "Decembar"
+}

@@ -1,0 +1,17 @@
+{
+  "month": "mes",
+  "date": "día",
+  "year": "año",
+  "full_date_jan": "Enero",
+  "full_date_feb": "Febrero",
+  "full_date_mar": "Marzo",
+  "full_date_apr": "Abril",
+  "full_date_may": "Mayo",
+  "full_date_jun": "Junio",
+  "full_date_jul": "Julio",
+  "full_date_aug": "Agosto",
+  "full_date_sep": "Septiembre",
+  "full_date_oct": "Octubre",
+  "full_date_nov": "Noviembre",
+  "full_date_dec": "Diciembre"
+}
