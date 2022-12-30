@@ -1,0 +1,17 @@
+{
+  "month": "месец",
+  "date": "дата",
+  "year": "година",
+  "full_date_jan": "януари",
+  "full_date_feb": "февруари",
+  "full_date_mar": "март",
+  "full_date_apr": "април",
+  "full_date_may": "май",
+  "full_date_jun": "юни",
+  "full_date_jul": "юли",
+  "full_date_aug": "август",
+  "full_date_sep": "септември",
+  "full_date_oct": "октомври",
+  "full_date_nov": "ноември",
+  "full_date_dec": "декември"
+}

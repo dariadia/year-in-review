@@ -31,6 +31,9 @@ p {
 
 header {
   padding: 16px 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo_header {
@@ -47,6 +50,30 @@ header {
 
 .your-company-logo_header {
   background: url("https://cdn4.vectorstock.com/i/1000x1000/41/03/bird-company-logo-template-design-vector-33654103.jpg") center -22px / 110px no-repeat;
+}
+
+.language-switcher { 
+  display: flex;
+  justify-content: space-around;
+  width: 260px;
+}
+
+.language-variant {
+  cursor: pointer;
+  background-color: var(--accent);
+  border: 1px solid transparent;
+  padding: 6px 8px;
+  border-radius: 20px;
+}
+
+.language-variant:focus {
+  outline: none;
+  border: 1px solid var(--border);
+}
+
+.language-variant:hover {
+  background-color: var(--border);
+  transition: background-color 0.3s;
 }
 
 main {

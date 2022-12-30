@@ -1,0 +1,17 @@
+{
+  "month": "month",
+  "date": "date",
+  "year": "year",
+  "full_date_jan": "January",
+  "full_date_feb": "February",
+  "full_date_mar": "March",
+  "full_date_apr": "April",
+  "full_date_may": "May",
+  "full_date_jun": "June",
+  "full_date_jul": "July",
+  "full_date_aug": "August",
+  "full_date_sep": "September",
+  "full_date_oct": "October",
+  "full_date_nov": "November",
+  "full_date_dec": "December"
+}

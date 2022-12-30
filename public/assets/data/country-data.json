@@ -1,0 +1,403 @@
+{
+  "quotes": [
+    {
+      "uuid": "LvPeqfWk",
+      "text": "Here’s how you can detect if you have exceeded your recommended intake of caffeine:<br/>* You haven’t blinked since the last lunar eclipse.<br/>* You can ski uphill.<br/>* You can jump-start your car without cables.<br/>* You chew on other people’s fingernails.",
+      "book": {
+        "title": "New Year, Same You",
+        "uuid": "eCaOSfyf",
+        "kind": "book"
+      },
+      "authors": [
+        {
+          "author_name": "Geoff Tibballs",
+          "uuid": "some-author"
+        },
+        {
+          "author_name": "some co-author",
+          "uuid": "co-author"
+        }
+      ],
+      "likes_count": 253394392
+    },
+    {
+      "uuid": "fTezhcNw",
+      "text": "“In other words, crew deaths are a feature, not a bug,” Cassaway said, dryly.",
+      "likes_count": 174,
+      "book": {
+        "title": "Redshirts",
+        "uuid": "hello-word",
+        "kind": "book"
+      },
+      "authors": [
+        {
+          "author_name": "John Scalzi",
+          "uuid": "some-author"
+        }
+      ]
+    },
+    {
+      "uuid": "lSTtieo4",
+      "text": "Sie hatten überlegt, ob sie ihre Mama um Rat fragen sollten. Aber wozu? Sie würde Nein sagen. Garantiert. Sie hatten überlegt, ob sie ihren Papa fragen sollten. Aber wozu? Er würde Ja sagen.",
+      "book": {
+        "title": "Die Vampirschwestern (Band 2) – Ein bissfestes Abenteuer",
+        "uuid": "hello-word",
+        "kind": "book"
+      },
+      "authors": [
+        {
+          "author_name": "Franziska Gehm",
+          "uuid": "some-author"
+        }
+      ],
+      "likes_count": 102
+    },
+    {
+      "uuid": "yS0lkME7",
+      "text": "„Daka?“, sagte Silvania leise.<br/>       „Hm.“<br/>       „Jacob hat gesagt, er mag meinen Stil.“<br/>      Daka zog eine Augenbraue in die Höhe. „Das ist gut, oder?“<br/>       Silvania nickte. „Meinst du, das hat etwas zu bedeuten?“<br/>       „Klar. Das bedeutet, dass er deinen Stil mag.“",
+      "book": {
+        "title": "Die Vampirschwestern 3 – Ein zahnharter Auftrag",
+        "uuid": "hello-word",
+        "kind": "book"
+      },
+      "authors": [
+        {
+          "author_name": "Franziska Gehm",
+          "uuid": "some-author"
+        }
+      ],
+      "likes_count": 94
+    },
+    {
+      "uuid": "Ba9ULztt",
+      "text": "Das Wunder war 1,93 Meter groß, hatte wellige blonde Haare und solariumgebräunte Haut. Das Wunder hatte auch einen Namen. Es hieß Dirk van Kombast. Bis auf seine Mutter hätte Dirk van Kombast wahrscheinlich niemand als ein Wunder bezeichnet. Schon gar nicht die Vampirschwestern.",
+      "book": {
+        "title": "Die Vampirschwestern 5 - Ferien mit Biss",
+        "uuid": "hello-word",
+        "kind": "book"
+      },
+      "authors": [
+        {
+          "author_name": "Franziska Gehm",
+          "uuid": "some-author"
+        }
+      ],
+      "likes_count": 9,
+      "kind": "book"
+    }
+  ],
+  "authors": [
+    {
+      "uuid": "NuhuW9bp",
+      "author_name": "P. G. Wodehouse",
+      "works_count": 240,
+      "readers_count": 293010,
+      "cover": "https://assets1.bmstatic.com/assets/meta_authors-images/24/56/615-profile.jpg"
+    },
+    {
+      "uuid": "G9WQKuJZ",
+      "author_name": "Barbara Meiklejohn-Free",
+      "works_count": 130,
+      "readers_count": 2290,
+      "cover": "https://a.bmstatic.com/iu/108/86/Barbara-Meiklejohn-Free-Flavia-Kate-Peters-1-1 (1) (1)-c5fa8bf3433cf2b5bd5ff54c2be577a0.jpg"
+    },
+    {
+      "uuid": "RgcHWeSn",
+      "author_name": "Martha Gray",
+      "works_count": 10,
+      "readers_count": 300,
+      "cover": "https://jwel.mit.edu/sites/mit-jwel/files/pictures/picture-104571-1525883273.jpg"
+    },
+    {
+      "uuid": "NuhuW9bp",
+      "author_name": "W. Shakespeare",
+      "works_count": 140,
+      "readers_count": 590215944,
+      "cover": "https://pbs.twimg.com/profile_images/713608747013242880/SHo5WWsc_400x400.jpg"
+    },
+    {
+      "uuid": "WrALHMhm",
+      "author_name": "Shannon Hamilton",
+      "works_count": 83,
+      "readers_count": 219,
+      "cover": "https://www.unityhills.org/wp-content/uploads/2017/07/ShannonHamilton-299x300.jpg"
+    },
+    {
+      "uuid": "aSNmiebu",
+      "author_name": "Debra Kauffman Yaun",
+      "works_count": 90,
+      "readers_count": 140,
+      "cover": "https://www.johnscreekarts.org/wp-content/uploads/2021/01/Debra_wDrawing.jpeg"
+    },
+    {
+      "uuid": "NuhuW9bp",
+      "author_name": "P. G. Wodehouse",
+      "works_count": 240,
+      "readers_count": 293010,
+      "cover": "https://assets1.bmstatic.com/assets/meta_authors-images/24/56/615-profile.jpg"
+    },
+    {
+      "uuid": "NuhuW9bp",
+      "author_name": "W. Shakespeare",
+      "works_count": 140,
+      "readers_count": 590215944,
+      "cover": "https://pbs.twimg.com/profile_images/713608747013242880/SHo5WWsc_400x400.jpg"
+    },
+    {
+      "uuid": "aSNmiebu",
+      "author_name": "Debra Kauffman Yaun",
+      "works_count": 90,
+      "readers_count": 140,
+      "cover": "https://www.johnscreekarts.org/wp-content/uploads/2021/01/Debra_wDrawing.jpeg"
+    }
+  ],
+  "books": [
+    {
+      "uuid": "hpP4BJ2m",
+      "cover": "https://assets1.bmstatic.com/assets/books-covers/0a/73/hpP4BJ2m-ipad.jpg",
+      "title": "Book of Destiny",
+      "authors": [
+        {
+          "author_name": "Barbara Meiklejohn-Free",
+          "uuid": "G9WQKuJZ"
+        }
+      ],
+      "readers_count": 54332,
+      "quotes_count": 9240234,
+      "impressions_count": 4602,
+      "kind": "book"
+    },
+    {
+      "uuid": "qH8BYcdu",
+      "cover": "https://assets1.bmstatic.com/assets/books-covers/69/73/qH8BYcdu-ipad.jpg",
+      "title": "The Search",
+      "authors": [
+        {
+          "author_name": "Osho",
+          "uuid": "some-uuid"
+        }
+      ],
+      "readers_count": 436,
+      "quotes_count": 304239,
+      "impressions_count": 3923
+    },
+    {
+      "uuid": "zCzwQcKD",
+      "cover": "https://assets1.bmstatic.com/assets/books-covers/4b/1d/ipad-35de871503973de5fed53c2758384104.jpeg",
+      "title": "Full Moon",
+      "authors": [
+        {
+          "author_name": "P. G. Wodehouse",
+          "uuid": "NuhuW9bp"
+        }
+      ],
+      "readers_count": 502,
+      "quotes_count": 5320,
+      "impressions_count": 532
+    },
+    {
+        "uuid": "xzQKUIGT",
+        "cover": "https://assets1.bmstatic.com/assets/books-covers/83/a8/ipad-768c647ec826a0470f56ecc0a55a1028.jpg",
+        "title": "Die Katze, die nicht sterben wollte",
+        "authors": [
+          {
+            "author_name": "Inger Frimansson",
+            "uuid": "NuhuW9bp"
+          }
+        ],
+        "readers_count": 602,
+        "quotes_count": 6024,
+        "impressions_count": 6022
+      },
+    {
+      "uuid": "YW60Y6Ef",
+      "cover": "https://assets1.bmstatic.com/assets/books-covers/f3/4d/ipad-2a133ceb4a7328b3b6c16fa4171be044.jpg",
+      "title": "Der Pflug des Zorns",
+      "authors": [
+        {
+          "author_name": "Maria Helleberg",
+          "uuid": "NuhuW9bp"
+        }
+      ],
+      "readers_count": 6430,
+      "quotes_count": 6063,
+      "impressions_count": 6023
+    },
+    {"uuid":"qH8BYcdu","cover":"https://assets1.bmstatic.com/assets/books-covers/69/73/qH8BYcdu-ipad.jpg","title":"The Search","authors":[{"author_name":"Osho","uuid":"some-uuid"}],"readers_count":436,"quotes_count":304239,"impressions_count":3923},
+    {
+      "uuid": "xzQKUIGT",
+      "cover": "https://assets1.bmstatic.com/assets/books-covers/83/a8/ipad-768c647ec826a0470f56ecc0a55a1028.jpg",
+      "title": "Die Katze, die nicht sterben wollte",
+      "authors": [
+        {
+          "author_name": "Inger Frimansson",
+          "uuid": "NuhuW9bp"
+        }
+      ],
+      "readers_count": 602,
+      "quotes_count": 6024,
+      "impressions_count": 6022
+    },
+    {
+        "uuid": "zCzwQcKD",
+        "cover": "https://assets1.bmstatic.com/assets/books-covers/4b/1d/ipad-35de871503973de5fed53c2758384104.jpeg",
+        "title": "Full Moon",
+        "authors": [
+          {
+            "author_name": "P. G. Wodehouse",
+            "uuid": "NuhuW9bp"
+          }
+        ],
+        "readers_count": 502,
+        "quotes_count": 5320,
+        "impressions_count": 532
+      }
+  ],
+  "shelves": [
+    {
+      "uuid": "FfK7Sgpu",
+      "title": "Budismo",
+      "books_count": 302032,
+      "readers_count": 19432024,
+      "covers": [
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/0a/73/hpP4BJ2m-ipad.jpg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/83/a8/ipad-768c647ec826a0470f56ecc0a55a1028.jpg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/13/af/EU9NWazh-ipad.jpeg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/f3/4d/ipad-2a133ceb4a7328b3b6c16fa4171be044.jpg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/4b/1d/ipad-35de871503973de5fed53c2758384104.jpeg"
+        }
+      ]
+    },
+    {
+      "uuid": "Y97uwjBE",
+      "title": "Bonnets at Dawn",
+      "books_count": 9032,
+      "readers_count": 492024,
+      "covers": [
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/0a/73/hpP4BJ2m-ipad.jpg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/f3/4d/ipad-2a133ceb4a7328b3b6c16fa4171be044.jpg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/83/a8/ipad-768c647ec826a0470f56ecc0a55a1028.jpg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/13/af/EU9NWazh-ipad.jpeg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/4b/1d/ipad-35de871503973de5fed53c2758384104.jpeg"
+        }
+      ]
+    },
+    {
+      "uuid": "DHypdT9T",
+      "title": "Deutsche Melancholie",
+      "books_count": 3302,
+      "readers_count": 2392024,
+      "covers": [
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/83/a8/ipad-768c647ec826a0470f56ecc0a55a1028.jpg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/13/af/EU9NWazh-ipad.jpeg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/31/4d/ipad-b7067f06efd0aedf299813d40486c463.jpg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/49/71/yMI4Hngg-ipad.jpg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/f3/4d/ipad-2a133ceb4a7328b3b6c16fa4171be044.jpg"
+        }
+      ]
+    },
+    {
+      "uuid": "JJgOK8uQ",
+      "title": "Audiobooks",
+      "books_count": 94231,
+      "readers_count": 53209,
+      "covers": [
+        {
+          "type": "audiobook",
+          "src": "https://assets1.bmstatic.com/assets/audiobooks-covers/e1/8f/aVq01Omu-small.jpeg?image_hash=dd58488c0d2b051d183ab3540f0db74c"
+        },
+        {
+          "type": "audiobook",
+          "src": "https://assets1.bmstatic.com/assets/audiobooks-covers/46/24/FfE3OnJS-small.jpeg?image_hash=e8806eabbe327805ceb444027a2338ee"
+        },
+        {
+          "type": "audiobook",
+          "src": "https://assets1.bmstatic.com/assets/audiobooks-covers/21/92/j5pVe0hT-small.jpeg?image_hash=42d9eb2dddcd6cf7f70bd0a61271d0b8"
+        },
+        {
+          "type": "audiobook",
+          "src": "https://assets1.bmstatic.com/assets/audiobooks-covers/c5/ea/vrlVWPxk-small.jpeg?image_hash=0de255b1674606ba61e487a4a9812020"
+        },
+        {
+          "type": "audiobook",
+          "src": "https://assets1.bmstatic.com/assets/audiobooks-covers/db/54/RwzU1Rx0-small.jpeg?image_hash=ef4f4871018f82d04b82e1a550d38406"
+        }
+      ]
+    },
+    {
+      "uuid": "T5he8G6R",
+      "title": "Book of the week",
+      "books_count": 59,
+      "readers_count": 3014,
+      "covers": [
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/49/71/yMI4Hngg-ipad.jpg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/13/af/EU9NWazh-ipad.jpeg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/83/a8/ipad-768c647ec826a0470f56ecc0a55a1028.jpg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/f3/4d/ipad-2a133ceb4a7328b3b6c16fa4171be044.jpg"
+        },
+        {
+          "type": "book",
+          "src": "https://assets1.bmstatic.com/assets/books-covers/31/4d/ipad-b7067f06efd0aedf299813d40486c463.jpg"
+        }
+      ]
+    }
+  ],
+  "most_read_month": [
+    5,
+    6,
+    12
+  ]
+}

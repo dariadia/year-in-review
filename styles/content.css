@@ -25,19 +25,8 @@
   text-transform: capitalize
 }
 
-.bookmate-2022__general_data .heading_2,
-.bookmate-2022__general_data .heading_3 {
-  font-size: 34px;
-  line-height: 40px
-}
-
-@media screen and (max-width:767px) {
-
-  .bookmate-2022__general_data .heading_2,
-  .bookmate-2022__general_data .heading_3 {
-    font-size: 24px;
-    line-height: 32px
-  }
+.yourcompany-2022__general_data {
+  margin-top: 64px;
 }
 
 .year-in-review__header {
@@ -122,14 +111,14 @@
   background-color: #4264fd
 }
 
-.bookmate-2022__column {
+.yourcompany-2022__column {
   width: 824px;
   margin: 0 auto
 }
 
 @media screen and (max-width:767px),
 screen and (min-width:768px) and (max-width:1023px) {
-  .bookmate-2022__column {
+  .yourcompany-2022__column {
     width: calc(100% - 40px);
     margin: 0 auto
   }
@@ -218,16 +207,16 @@ ul {
   list-style: none
 }
 
-.bookmate-2022__general_map {
+.yourcompany-2022__general_map {
   overflow: hidden
 }
 
-.bookmate-2022__general_map .heading {
+.yourcompany-2022__general_map .heading {
   color: #c1f642;
   font-weight: 700
 }
 
-.bookmate-2022__general_map .year-in-review__map-desc,
+.yourcompany-2022__general_map .year-in-review__map-desc,
 .map-navigation .year-in-review__button {
   font-weight: 700;
   font-size: 24px;
@@ -239,7 +228,15 @@ ul {
   overflow-y: hidden;
   white-space: nowrap;
   padding-bottom: 12px;
-  display: flex
+  display: flex;
+  max-width: calc(100% - 40px);
+  margin: 0 auto 18px;
+}
+
+@media screen and (max-width:767px) {
+  .map-navigation {
+    max-width: inherit;
+  }
 }
 
 .map-navigation .year-in-review__button {
@@ -286,8 +283,8 @@ ul {
 .country-items__list {
   list-style: none;
   display: flex;
-  margin: 0;
-  padding: 0
+  padding: 0;
+  margin: 24px 0;
 }
 
 .year-in-review_quote {
@@ -322,9 +319,9 @@ ul {
   color: #fff
 }
 
-.bookmate-2022__general_authors .year-in-review_author .author-link:hover,
-.bookmate-2022__general_books .year-in-review_book a:hover,
-.bookmate-2022__personal_quiz .quotes-stata .year-in-review_quote__book a:hover,
+.yourcompany-2022__general_authors .year-in-review_author .author-link:hover,
+.yourcompany-2022__general_books .year-in-review_book a:hover,
+.yourcompany-2022__personal_quiz .quotes-stata .year-in-review_quote__book a:hover,
 .year-in-review_quote__book a:hover {
   color: #3456f3
 }
@@ -338,49 +335,45 @@ ul {
   height: 24px
 }
 
-.bookmate-2022__general_authors {
+.yourcompany-2022__general_authors {
   font-size: 20px;
   line-height: 24px
 }
 
-.bookmate-2022__general_authors .year-in-review_author {
+.yourcompany-2022__general_authors .year-in-review_author {
   margin-right: 16px
 }
 
-.bookmate-2022__general_authors .year-in-review_author .author-image {
-  position: relative
-}
-
-.bookmate-2022__general_authors .year-in-review_author .author-link,
-.bookmate-2022__general_books .year-in-review_book a {
+.yourcompany-2022__general_authors .year-in-review_author .author-link,
+.yourcompany-2022__general_books .year-in-review_book a {
   display: block;
   color: #fff
 }
 
-.bookmate-2022__general_authors .year-in-review_author .year-in-review_author_frame {
+.yourcompany-2022__general_authors .year-in-review_author .year-in-review_author_frame {
   height: 280px
 }
 
-.bookmate-2022__general_authors .year-in-review_author .author-cover__wrapper {
+.yourcompany-2022__general_authors .year-in-review_author .author-cover__wrapper {
   overflow: hidden;
   position: absolute
 }
 
-.bookmate-2022__general_authors .year-in-review_author .author-cover__wrapper.round_orange,
-.bookmate-2022__general_authors .year-in-review_author .author-cover__wrapper.round_yellow {
+.yourcompany-2022__general_authors .year-in-review_author .author-cover__wrapper.round_orange,
+.yourcompany-2022__general_authors .year-in-review_author .author-cover__wrapper.round_yellow {
   top: 30px;
   left: 35px;
   height: 220px;
   width: 157px
 }
 
-.bookmate-2022__general_authors .year-in-review_author .author-cover__wrapper.round_orange>.author-cover,
-.bookmate-2022__general_authors .year-in-review_author .author-cover__wrapper.round_yellow>.author-cover {
+.yourcompany-2022__general_authors .year-in-review_author .author-cover__wrapper.round_orange>.author-cover,
+.yourcompany-2022__general_authors .year-in-review_author .author-cover__wrapper.round_yellow>.author-cover {
   height: 220px;
   margin-left: -20px
 }
 
-.bookmate-2022__general_authors .year-in-review_author .author-cover__wrapper.rect_orange {
+.yourcompany-2022__general_authors .year-in-review_author .author-cover__wrapper.rect_orange {
   top: 22px;
   left: 25px;
   height: 240px;
@@ -388,12 +381,12 @@ ul {
   transform: rotate(-2deg)
 }
 
-.bookmate-2022__general_authors .year-in-review_author .author-cover__wrapper.rect_orange>.author-cover {
+.yourcompany-2022__general_authors .year-in-review_author .author-cover__wrapper.rect_orange>.author-cover {
   height: 240px;
   margin-left: -20px
 }
 
-.bookmate-2022__general_authors .year-in-review_author .author-cover__wrapper.rect_green {
+.yourcompany-2022__general_authors .year-in-review_author .author-cover__wrapper.rect_green {
   top: 30px;
   left: 26px;
   height: 225px;
@@ -401,12 +394,12 @@ ul {
   transform: rotate(-2deg)
 }
 
-.bookmate-2022__general_authors .year-in-review_author .author-cover__wrapper.rect_green>.author-cover {
+.yourcompany-2022__general_authors .year-in-review_author .author-cover__wrapper.rect_green>.author-cover {
   height: 220px;
   margin-left: -20px
 }
 
-.bookmate-2022__general_authors .year-in-review_author .author-cover__wrapper.rect_blue {
+.yourcompany-2022__general_authors .year-in-review_author .author-cover__wrapper.rect_blue {
   top: 30px;
   left: 31px;
   height: 230px;
@@ -415,7 +408,7 @@ ul {
   border-radius: 140px
 }
 
-.bookmate-2022__general_authors .year-in-review_author .author-cover__wrapper.rect_blue>.author-cover {
+.yourcompany-2022__general_authors .year-in-review_author .author-cover__wrapper.rect_blue>.author-cover {
   height: 230px;
   margin-left: -20px
 }
@@ -426,7 +419,7 @@ ul {
   color: #9a938d;
   font-size: 14px;
   flex-wrap: wrap;
-  max-width: 120px
+  justify-content: center;
 }
 
 @media screen and (max-width:767px) {
@@ -455,43 +448,59 @@ ul {
   align-items: center
 }
 
-.bookmate-2022__general_books,
-.bookmate-2022__general_shelves {
-  font-size: 20px;
-  line-height: 24px
+.lead-in {
+  max-width: 700px;
+  margin: 24px auto 16px;
 }
 
-.bookmate-2022__general_books .year-in-review_book {
+.yourcompany-2022__general_month > .country-items__list {
+  justify-content: center;
+}
+
+.yourcompany-2022__general_authors,
+.yourcompany-2022__general_books,
+.yourcompany-2022__general_month {
+  margin-top: 48px;
+}
+
+.yourcompany-2022__general_books,
+.yourcompany-2022__general_shelves {
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 48px;
+}
+
+.yourcompany-2022__general_books .year-in-review_book {
   margin-right: 50px
 }
 
-.bookmate-2022__general_books .year-in-review_book__cover {
+.yourcompany-2022__general_books .year-in-review_book__cover {
   height: 250px;
   border: 2px solid rgba(255, 255, 255, .12);
   border-radius: 8px
 }
 
-.bookmate-2022__general_books .year-in-review_book .book-author {
+.yourcompany-2022__general_books .year-in-review_book .book-author {
   max-width: 180px;
   white-space: initial
 }
 
-.bookmate-2022__general_shelves .year-in-review_shelf {
+.yourcompany-2022__general_shelves .year-in-review_shelf {
   width: 350px;
   white-space: initial
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__general_shelves .year-in-review_shelf {
+  .yourcompany-2022__general_shelves .year-in-review_shelf {
     width: 250px
   }
 }
 
-.bookmate-2022__general_shelves .year-in-review_shelf-link {
+.yourcompany-2022__general_shelves .year-in-review_shelf-link {
   color: #fff
 }
 
-.bookmate-2022__general_shelves .shelf-card__cover {
+.yourcompany-2022__general_shelves .shelf-card__cover {
   display: flex;
   width: 350px;
   height: 90px;
@@ -500,13 +509,13 @@ ul {
   position: relative
 }
 
-.bookmate-2022__general_shelves .shelf-card__cover .cover-item {
+.yourcompany-2022__general_shelves .shelf-card__cover .cover-item {
   position: absolute;
   max-height: 95px;
   border: 1px solid rgba(0, 0, 0, .08)
 }
 
-.bookmate-2022__general_shelves .shelf-card__cover .cover-item:first-child {
+.yourcompany-2022__general_shelves .shelf-card__cover .cover-item:first-child {
   transform: rotate(-13.51deg);
   z-index: 1;
   left: 17px;
@@ -514,12 +523,12 @@ ul {
 }
 
 @media screen and (min-width:1024px) and (max-width:1295px) {
-  .bookmate-2022__general_shelves .shelf-card__cover .cover-item:first-child {
+  .yourcompany-2022__general_shelves .shelf-card__cover .cover-item:first-child {
     left: 27px
   }
 }
 
-.bookmate-2022__general_shelves .shelf-card__cover .cover-item:nth-child(2) {
+.yourcompany-2022__general_shelves .shelf-card__cover .cover-item:nth-child(2) {
   transform: rotate(-6.56deg);
   z-index: 2;
   left: 50px;
@@ -527,12 +536,12 @@ ul {
 }
 
 @media screen and (min-width:1024px) and (max-width:1295px) {
-  .bookmate-2022__general_shelves .shelf-card__cover .cover-item:nth-child(2) {
+  .yourcompany-2022__general_shelves .shelf-card__cover .cover-item:nth-child(2) {
     left: 70px
   }
 }
 
-.bookmate-2022__general_shelves .shelf-card__cover .cover-item:nth-child(3) {
+.yourcompany-2022__general_shelves .shelf-card__cover .cover-item:nth-child(3) {
   transform: rotate(0);
   z-index: 3;
   left: 80px;
@@ -540,12 +549,12 @@ ul {
 }
 
 @media screen and (min-width:1024px) and (max-width:1295px) {
-  .bookmate-2022__general_shelves .shelf-card__cover .cover-item:nth-child(3) {
+  .yourcompany-2022__general_shelves .shelf-card__cover .cover-item:nth-child(3) {
     left: 120px
   }
 }
 
-.bookmate-2022__general_shelves .shelf-card__cover .cover-item:nth-child(4) {
+.yourcompany-2022__general_shelves .shelf-card__cover .cover-item:nth-child(4) {
   transform: rotate(8.34deg);
   z-index: 4;
   left: 110px;
@@ -553,12 +562,12 @@ ul {
 }
 
 @media screen and (min-width:1024px) and (max-width:1295px) {
-  .bookmate-2022__general_shelves .shelf-card__cover .cover-item:nth-child(4) {
+  .yourcompany-2022__general_shelves .shelf-card__cover .cover-item:nth-child(4) {
     left: 160px
   }
 }
 
-.bookmate-2022__general_shelves .shelf-card__cover .cover-item:nth-child(5) {
+.yourcompany-2022__general_shelves .shelf-card__cover .cover-item:nth-child(5) {
   transform: rotate(28.51deg);
   z-index: 5;
   left: 145px;
@@ -566,67 +575,67 @@ ul {
 }
 
 @media screen and (min-width:1024px) and (max-width:1295px) {
-  .bookmate-2022__general_shelves .shelf-card__cover .cover-item:nth-child(5) {
+  .yourcompany-2022__general_shelves .shelf-card__cover .cover-item:nth-child(5) {
     left: 200px
   }
 }
 
-.bookmate-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:first-child {
+.yourcompany-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:first-child {
   left: 10px
 }
 
 @media screen and (min-width:1024px) and (max-width:1295px) {
-  .bookmate-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:first-child {
+  .yourcompany-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:first-child {
     left: 10px
   }
 }
 
-.bookmate-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(2) {
+.yourcompany-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(2) {
   left: 30px
 }
 
 @media screen and (min-width:1024px) and (max-width:1295px) {
-  .bookmate-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(2) {
+  .yourcompany-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(2) {
     left: 50px
   }
 }
 
-.bookmate-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(3) {
+.yourcompany-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(3) {
   left: 60px
 }
 
 @media screen and (min-width:1024px) and (max-width:1295px) {
-  .bookmate-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(3) {
+  .yourcompany-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(3) {
     left: 100px
   }
 }
 
-.bookmate-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(4) {
+.yourcompany-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(4) {
   left: 90px
 }
 
 @media screen and (min-width:1024px) and (max-width:1295px) {
-  .bookmate-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(4) {
+  .yourcompany-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(4) {
     left: 150px
   }
 }
 
-.bookmate-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(5) {
+.yourcompany-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(5) {
   left: 115px
 }
 
 @media screen and (min-width:1024px) and (max-width:1295px) {
-  .bookmate-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(5) {
+  .yourcompany-2022__general_shelves .shelf-card__cover .cover-item.is-audiobook:nth-child(5) {
     left: 190px
   }
 }
 
-.bookmate-2022__general_month {
+.yourcompany-2022__general_month {
   padding-bottom: 8px
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__general_month>.country-items__list {
+  .yourcompany-2022__general_month>.country-items__list {
     font-size: 24px;
     line-height: 32px;
     flex-direction: column
@@ -655,15 +664,26 @@ ul {
   color: #000
 }
 
+.year-in-review__banner > button {
+  padding: 12px 16px;
+  border-radius: 30px;
+}
+
+.accented-dark { 
+  color: var(--secondary)
+}
+
 .year-in-review__banner {
-  width: 825px;
+  max-width: 1000px;
   height: 340px;
-  background: linear-gradient(180deg, #fccfd7 0, #a9c0ef 100%);
+  background: rgb(31,182,240);
+  background: radial-gradient(circle, rgba(31,182,240,1) 14%, rgba(0,212,255,1) 43%, rgba(29,35,48,1) 92%);
   border-radius: 20px;
   color: #000;
-  padding: 50px 90px;
+  padding: 30px 90px;
   box-sizing: border-box;
-  position: relative
+  position: relative;
+  margin: auto;
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
@@ -702,76 +722,62 @@ ul {
   }
 }
 
-.year-in-review__banner .banner__decor {
-  position: absolute;
-  bottom: -36px;
-  right: 0;
-  width: 290px;
-  height: 162px
-}
-
-@media screen and (max-width:767px) {
-  .year-in-review__banner .banner__decor {
-    width: 100%
-  }
-}
-
 .black-padding {
   padding-bottom: 48px
 }
 
-.bookmate-2022__personal {
+.yourcompany-2022__personal {
   background: linear-gradient(180deg, #fccfd7 0, #a9c0ef 100%);
   color: #000
 }
 
-.bookmate-2022__personal .bookmate-2022__column {
+.yourcompany-2022__personal .yourcompany-2022__column {
   padding: 70px 0 0
 }
 
-.bookmate-2022__personal .personal_stats {
+.yourcompany-2022__personal .personal_stats {
   display: flex;
   align-items: center
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__personal .personal_stats {
+  .yourcompany-2022__personal .personal_stats {
     flex-direction: column;
     align-items: flex-start
   }
 }
 
-.bookmate-2022__personal .personal_stats-item {
+.yourcompany-2022__personal .personal_stats-item {
   display: flex;
   align-items: center
 }
 
-.bookmate-2022__personal .personal_stats__wrapper {
+.yourcompany-2022__personal .personal_stats__wrapper {
   position: relative;
   margin: 0 18px 0 12px
 }
 
-.bookmate-2022__personal .personal_stats__decor {
+.yourcompany-2022__personal .personal_stats__decor {
   font-size: 20px;
   line-height: 24px
 }
 
-.bookmate-2022__personal .personal_stats__decor.pink {
+.yourcompany-2022__personal .personal_stats__decor.pink {
   width: 64px;
   height: 64px
 }
 
-.bookmate-2022__personal .personal_stats__decor.orange {
+.yourcompany-2022__personal .personal_stats__decor.orange {
   width: 86px;
   height: 86px
 }
 
-.bookmate-2022__personal .personal_stats__decor.yellow {
+.yourcompany-2022__personal .personal_stats__decor.yellow {
   width: 64px;
   height: 64px
 }
 
-.bookmate-2022__personal .personal_stats__count {
+.yourcompany-2022__personal .personal_stats__count {
   position: absolute;
   font-weight: 700;
   font-size: 24px;
@@ -781,17 +787,17 @@ ul {
   text-align: center
 }
 
-.bookmate-2022__personal .personal_stats__count.pink {
+.yourcompany-2022__personal .personal_stats__count.pink {
   top: 15px;
   width: 64px
 }
 
-.bookmate-2022__personal .personal_stats__count.orange {
+.yourcompany-2022__personal .personal_stats__count.orange {
   top: 25px;
   width: 86px
 }
 
-.bookmate-2022__personal .personal_stats__count.yellow {
+.yourcompany-2022__personal .personal_stats__count.yellow {
   top: 15px;
   width: 64px
 }
@@ -828,7 +834,7 @@ ul {
   top: 40px
 }
 
-.bookmate-2022__personal_quiz .quiz__label>input,
+.yourcompany-2022__personal_quiz .quiz__label>input,
 .books-graph__bar__tooltip {
   display: none
 }
@@ -879,12 +885,12 @@ screen and (min-width:768px) and (max-width:1023px) {
   }
 }
 
-.bookmate-2022__personal_quiz .quiz__author-read-most_variants {
+.yourcompany-2022__personal_quiz .quiz__author-read-most_variants {
   display: flex
 }
 
 @media screen and (max-width:330px) {
-  .bookmate-2022__personal_quiz .quiz__author-read-most_variants {
+  .yourcompany-2022__personal_quiz .quiz__author-read-most_variants {
     width: 280px;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -892,33 +898,33 @@ screen and (min-width:768px) and (max-width:1023px) {
   }
 }
 
-.bookmate-2022__personal_quiz fieldset {
+.yourcompany-2022__personal_quiz fieldset {
   border: 0;
   margin: 0;
   padding: 0
 }
 
-.bookmate-2022__personal_quiz .quiz__label {
+.yourcompany-2022__personal_quiz .quiz__label {
   position: relative;
   width: 150px;
   cursor: pointer
 }
 
-.bookmate-2022__personal_quiz .quiz__label:not(:last-child) {
+.yourcompany-2022__personal_quiz .quiz__label:not(:last-child) {
   margin-right: 100px
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__personal_quiz .quiz__label:not(:last-child) {
+  .yourcompany-2022__personal_quiz .quiz__label:not(:last-child) {
     margin-right: 18px
   }
 
-  .bookmate-2022__personal_quiz .quiz__label {
+  .yourcompany-2022__personal_quiz .quiz__label {
     width: 100px
   }
 }
 
-.bookmate-2022__personal_quiz .quiz__label::before {
+.yourcompany-2022__personal_quiz .quiz__label::before {
   position: absolute;
   z-index: 3;
   right: 5px;
@@ -926,90 +932,90 @@ screen and (min-width:768px) and (max-width:1023px) {
   height: 42px
 }
 
-.bookmate-2022__personal_quiz .quiz__label:hover::before {
+.yourcompany-2022__personal_quiz .quiz__label:hover::before {
   content: url(https://a.bmstatic.com/iu/184/182/B-59eda2813399d538f19c9f07fabec9af.svg)
 }
 
-.bookmate-2022__personal_quiz .quiz__label:hover svg>path {
+.yourcompany-2022__personal_quiz .quiz__label:hover svg>path {
   fill: #4264fd
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__personal_quiz .quiz__label.friends:not(:last-child) {
+  .yourcompany-2022__personal_quiz .quiz__label.friends:not(:last-child) {
     margin-right: 18px
   }
 }
 
-.bookmate-2022__personal_quiz .quiz__label.friends::before {
+.yourcompany-2022__personal_quiz .quiz__label.friends::before {
   right: 25px
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__personal_quiz .quiz__label.friends::before {
+  .yourcompany-2022__personal_quiz .quiz__label.friends::before {
     right: 0
   }
 
-  .bookmate-2022__personal_quiz .quiz__label.quote-author:not(:last-child) {
+  .yourcompany-2022__personal_quiz .quiz__label.quote-author:not(:last-child) {
     margin-right: 16px
   }
 }
 
-.bookmate-2022__personal_quiz .quiz__label.quote-author::before {
+.yourcompany-2022__personal_quiz .quiz__label.quote-author::before {
   left: 0;
   right: 0
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__personal_quiz .quiz__label.quote-author::before {
+  .yourcompany-2022__personal_quiz .quiz__label.quote-author::before {
     left: -10px
   }
 
-  .bookmate-2022__personal_quiz .quiz__label.books:not(:last-child) {
+  .yourcompany-2022__personal_quiz .quiz__label.books:not(:last-child) {
     margin-right: 16px
   }
 }
 
-.bookmate-2022__personal_quiz .quiz__label.books::before {
+.yourcompany-2022__personal_quiz .quiz__label.books::before {
   right: 35px
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__personal_quiz .quiz__label.books::before {
+  .yourcompany-2022__personal_quiz .quiz__label.books::before {
     right: 5px
   }
 }
 
-.bookmate-2022__personal_quiz .block-select.quiz__label:hover::before,
-.bookmate-2022__personal_quiz .quiz__label::before {
+.yourcompany-2022__personal_quiz .block-select.quiz__label:hover::before,
+.yourcompany-2022__personal_quiz .quiz__label::before {
   content: url(https://a.bmstatic.com/iu/55/159/A-051ce0b68255b0dedae908956731202f.svg)
 }
 
-.bookmate-2022__personal_quiz .block-select.quiz__label:hover svg>path,
-.bookmate-2022__personal_quiz .quiz__frame svg>path {
+.yourcompany-2022__personal_quiz .block-select.quiz__label:hover svg>path,
+.yourcompany-2022__personal_quiz .quiz__frame svg>path {
   fill: #cda500
 }
 
-.bookmate-2022__personal_quiz .block-select.selected-correct {
+.yourcompany-2022__personal_quiz .block-select.selected-correct {
   transform: scale(1.08) translate(10px, 0)
 }
 
 @media screen and (max-width:330px) {
-  .bookmate-2022__personal_quiz .block-select.selected-correct {
+  .yourcompany-2022__personal_quiz .block-select.selected-correct {
     transform: scale(1.05) translate(5px, -2px)
   }
 }
 
-.bookmate-2022__personal_quiz .block-select.selected-correct svg>path,
-.bookmate-2022__personal_quiz .block-select.selected-correct:hover svg>path {
+.yourcompany-2022__personal_quiz .block-select.selected-correct svg>path,
+.yourcompany-2022__personal_quiz .block-select.selected-correct:hover svg>path {
   fill: #37be8c
 }
 
-.bookmate-2022__personal_quiz .block-select.selected-correct::before,
-.bookmate-2022__personal_quiz .block-select.selected-correct:hover::before {
+.yourcompany-2022__personal_quiz .block-select.selected-correct::before,
+.yourcompany-2022__personal_quiz .block-select.selected-correct:hover::before {
   content: url(https://a.bmstatic.com/iu/57/206/C-50894faa3ed87a2f280f6704d5e3e0e2.svg)
 }
 
-.bookmate-2022__personal_quiz .block-select.selected-correct.friends::before {
+.yourcompany-2022__personal_quiz .block-select.selected-correct.friends::before {
   width: 130px;
   height: 130px;
   position: absolute;
@@ -1019,34 +1025,34 @@ screen and (min-width:768px) and (max-width:1023px) {
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__personal_quiz .block-select.selected-correct.friends::before {
+  .yourcompany-2022__personal_quiz .block-select.selected-correct.friends::before {
     width: 105px;
     height: 105px
   }
 }
 
-.bookmate-2022__personal_quiz .block-select.selected-correct.books .quiz__book-cover,
-.bookmate-2022__personal_quiz .block-select.selected-correct.quote-author .quiz__friend-image {
+.yourcompany-2022__personal_quiz .block-select.selected-correct.books .quiz__book-cover,
+.yourcompany-2022__personal_quiz .block-select.selected-correct.quote-author .quiz__friend-image {
   border: 2px solid #37be8c
 }
 
-.bookmate-2022__personal_quiz .block-select.selected-incorrect svg>path,
-.bookmate-2022__personal_quiz .block-select.selected-incorrect:hover svg>path {
+.yourcompany-2022__personal_quiz .block-select.selected-incorrect svg>path,
+.yourcompany-2022__personal_quiz .block-select.selected-incorrect:hover svg>path {
   fill: #fa4c3e
 }
 
-.bookmate-2022__personal_quiz .block-select.selected-incorrect::before,
-.bookmate-2022__personal_quiz .block-select.selected-incorrect:hover::before {
+.yourcompany-2022__personal_quiz .block-select.selected-incorrect::before,
+.yourcompany-2022__personal_quiz .block-select.selected-incorrect:hover::before {
   content: url(https://a.bmstatic.com/iu/184/182/B-a463b1ce81f428003bdbcf75bb8f3dc6.svg)
 }
 
-.bookmate-2022__personal_quiz .block-select.selected-incorrect.books .quiz__book-cover,
-.bookmate-2022__personal_quiz .block-select.selected-incorrect.friends .quiz__friend-image,
-.bookmate-2022__personal_quiz .block-select.selected-incorrect.quote-author .quiz__friend-image {
+.yourcompany-2022__personal_quiz .block-select.selected-incorrect.books .quiz__book-cover,
+.yourcompany-2022__personal_quiz .block-select.selected-incorrect.friends .quiz__friend-image,
+.yourcompany-2022__personal_quiz .block-select.selected-incorrect.quote-author .quiz__friend-image {
   border: 2px solid #fa4c3e
 }
 
-.bookmate-2022__personal_quiz .quiz__frame {
+.yourcompany-2022__personal_quiz .quiz__frame {
   position: relative;
   height: 150px;
   width: 112px
@@ -1054,20 +1060,24 @@ screen and (min-width:768px) and (max-width:1023px) {
 
 @media screen and (max-width:767px) {
 
-  .bookmate-2022__personal_quiz .quiz__frame,
-  .bookmate-2022__personal_quiz .quiz__frame svg {
+  .yourcompany-2022__personal_quiz .quiz__frame,
+  .yourcompany-2022__personal_quiz .quiz__frame svg {
     height: 126px;
     width: 100px
   }
 }
 
-.bookmate-2022__personal_quiz .quiz__author-image-wrapper {
+.author-image {
+  height: 150px;
+}
+
+.yourcompany-2022__personal_quiz .quiz__author-image-wrapper {
   overflow: hidden;
   position: absolute
 }
 
-.bookmate-2022__personal_quiz .quiz-frame-0,
-.bookmate-2022__personal_quiz .quiz-frame-2 {
+.yourcompany-2022__personal_quiz .quiz-frame-0,
+.yourcompany-2022__personal_quiz .quiz-frame-2 {
   height: 150px;
   width: 115px;
   left: 17px;
@@ -1076,8 +1086,8 @@ screen and (min-width:768px) and (max-width:1023px) {
 
 @media screen and (max-width:767px) {
 
-  .bookmate-2022__personal_quiz .quiz-frame-0,
-  .bookmate-2022__personal_quiz .quiz-frame-2 {
+  .yourcompany-2022__personal_quiz .quiz-frame-0,
+  .yourcompany-2022__personal_quiz .quiz-frame-2 {
     height: 100px;
     width: 75px;
     top: 12px;
@@ -1085,7 +1095,7 @@ screen and (min-width:768px) and (max-width:1023px) {
   }
 }
 
-.bookmate-2022__personal_quiz .quiz-frame-1 {
+.yourcompany-2022__personal_quiz .quiz-frame-1 {
   height: 160px;
   width: 120px;
   left: 15px;
@@ -1093,7 +1103,7 @@ screen and (min-width:768px) and (max-width:1023px) {
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__personal_quiz .quiz-frame-1 {
+  .yourcompany-2022__personal_quiz .quiz-frame-1 {
     height: 105px;
     width: 80px;
     top: 12px;
@@ -1101,74 +1111,82 @@ screen and (min-width:768px) and (max-width:1023px) {
   }
 }
 
-.bookmate-2022__personal_quiz .answer_hint {
+.yourcompany-2022__personal_quiz .answer_hint {
   font-weight: 700
 }
 
-.bookmate-2022__personal_quiz .block-select {
+.yourcompany-2022__personal_quiz .block-select {
   cursor: default
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__personal_quiz .quotes-stata .quotes-stata_item {
+  .yourcompany-2022__personal_quiz .quotes-stata .quotes-stata_item {
     margin-right: 24px;
     width: 300px;
     white-space: normal
   }
 }
 
-.bookmate-2022__personal_quiz .quotes-stata .year-in-review_quote__book {
+.year-in-review_quote__book {
+  margin: 16px 0;
+}
+
+.yourcompany-2022__personal_quiz .quotes-stata .year-in-review_quote__book {
   font-size: 12px;
   line-height: 14px
 }
 
-.bookmate-2022__personal_quiz .quotes-stata .year-in-review_quote__book a {
+.yourcompany-2022__personal_quiz .quotes-stata .year-in-review_quote__book a {
   color: #000
 }
 
-.bookmate-2022__personal_quiz .quotes-stata .year-in-review_quote__likes {
-  font-size: 12px
+.year-in-review_quote__likes {
+  justify-content: center;
 }
 
-.bookmate-2022__personal_quiz .quotes-stata .year-in-review_quote__likes>span>svg {
+.yourcompany-2022__personal_quiz .quotes-stata .year-in-review_quote__likes {
+  font-size: 12px;
+}
+
+.yourcompany-2022__personal_quiz .quotes-stata .year-in-review_quote__likes>span>svg {
   width: 12px;
   height: 12px
 }
 
-.bookmate-2022__personal_quiz .quiz__friend-image {
+.yourcompany-2022__personal_quiz .quiz__friend-image {
   height: 112px;
   border-radius: 100px;
   box-sizing: border-box
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__personal_quiz .quiz__friend-image {
+  .yourcompany-2022__personal_quiz .quiz__friend-image {
     height: 90px
   }
 }
 
-.bookmate-2022__personal_quiz .quiz__book-cover {
+.yourcompany-2022__personal_quiz .quiz__book-cover {
   height: 140px;
   box-sizing: border-box
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__personal_quiz .quiz__book-cover.book {
+  .yourcompany-2022__personal_quiz .quiz__book-cover.book {
     height: 120px;
     max-width: 100px
   }
 
-  .bookmate-2022__personal_quiz .quiz__book-cover.audiobook {
+  .yourcompany-2022__personal_quiz .quiz__book-cover.audiobook {
     height: 100px
   }
 }
 
-.bookmate-2022__personal_quiz .genres__wrapper {
+.yourcompany-2022__personal_quiz .genres__wrapper {
   display: flex;
   flex-wrap: wrap
 }
 
-.bookmate-2022__personal_quiz .genres__wrapper .genre-bubble {
+.yourcompany-2022__personal_quiz .genres__wrapper .genre-bubble {
   padding: 8px 12px;
   background: #e8e8e8;
   border-radius: 8px;
@@ -1178,28 +1196,28 @@ screen and (min-width:768px) and (max-width:1023px) {
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__personal_quiz .genres__wrapper .genre-bubble {
+  .yourcompany-2022__personal_quiz .genres__wrapper .genre-bubble {
     margin: 6px 4px 0
   }
 }
 
-.bookmate-2022__personal_quiz .genres__wrapper .marked-genre {
+.yourcompany-2022__personal_quiz .genres__wrapper .marked-genre {
   color: #22201f
 }
 
-.bookmate-2022__personal_quiz .genres__wrapper .marked-0 {
+.yourcompany-2022__personal_quiz .genres__wrapper .marked-0 {
   background: #37be8c
 }
 
-.bookmate-2022__personal_quiz .genres__wrapper .marked-1 {
+.yourcompany-2022__personal_quiz .genres__wrapper .marked-1 {
   background: #ff864f
 }
 
-.bookmate-2022__personal_quiz .genres__wrapper .marked-2 {
+.yourcompany-2022__personal_quiz .genres__wrapper .marked-2 {
   background: #e2e729
 }
 
-.bookmate-2022__personal_quiz .quiz__quote-author_text {
+.yourcompany-2022__personal_quiz .quiz__quote-author_text {
   padding: 16px 20px;
   width: 600px;
   background: #fff;
@@ -1211,7 +1229,7 @@ screen and (min-width:768px) and (max-width:1023px) {
   position: relative
 }
 
-.bookmate-2022__personal_quiz .quiz__quote-author_text::before {
+.yourcompany-2022__personal_quiz .quiz__quote-author_text::before {
   width: 8px;
   height: calc(100% - 32px);
   margin: auto;
@@ -1223,7 +1241,7 @@ screen and (min-width:768px) and (max-width:1023px) {
 }
 
 @media screen and (max-width:767px) {
-  .bookmate-2022__personal_quiz .quiz__quote-author_text {
+  .yourcompany-2022__personal_quiz .quiz__quote-author_text {
     width: calc(100% - 50px)
   }
 
@@ -1294,7 +1312,7 @@ screen and (min-width:768px) and (max-width:1023px) {
   overflow-y: hidden;
   white-space: nowrap;
   padding-bottom: 12px;
-  -webkit-overflow-scrolling: touch
+  -webkit-overflow-scrolling: touch;
 }
 
 .horizontal-scroller .book,
@@ -2917,4 +2935,16 @@ screen and (min-width:1024px) and (max-width:1295px) {
   cursor: pointer;
   position: relative;
   display: inline-block
+}
+
+.mock-page {
+  min-height: 85vh;
+  font-size: 42px;
+  line-height: 50px;
+  margin: 24px 0 0;
+}
+
+.mock-page img {
+  display: block;
+  margin: 48px auto;
 }

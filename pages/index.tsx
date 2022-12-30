@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 
@@ -8,13 +7,19 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import { useState } from 'react'
-
+import { Event } from 'types/data'
 // @ts-ignore
 import general from '/public/assets/data/countries.json'
-import { Event } from 'types/data'
+// @ts-ignore
+import personal from '/public/assets/data/user-data.json'
+// @ts-ignore
+import quiz from '/public/assets/data/quiz-data.json'
+// @ts-ignore
+import country from '/public/assets/data/country-data.json'
+import { YearInReviewGeneralData } from 'components/CountryDataShowcase'
 
 type Props = {
-  country: string
+  userCountry: string
 }
 
 const Homepage = (
@@ -23,10 +28,11 @@ const Homepage = (
   const router = useRouter()
   /* @ts-ignore */
   // It's a react-i18next: v12+ bug https://github.com/i18next/react-i18next/issues/1601
-  const { t } = useTranslation(['common', 'countries', 'countries_locative'])
+  const { t } = useTranslation(['common', 'countries', 'countries_locative', 'dates'])
 
   const [activeTab, setActiveTab] = useState('read_pages')
   const [activeTabLabel, setActiveTabLabel] = useState('read')
+  const [isAuth, setAuth] = useState(false)
 
   const setMapTab = (id: string): void => {
     const mapNode = document.getElementById('map-container')
@@ -39,7 +45,7 @@ const Homepage = (
 
   return (
     <>
-      <Header {...{ activeTab, activeTabLabel, general, country: _props.country }} />
+      <Header {...{ activeTab, activeTabLabel, general, country: _props.userCountry }} />
       <main>
         <h1>
           {t('common:year_in_review_heading')}
@@ -47,7 +53,7 @@ const Homepage = (
         <p className="year-in-review__desc">
           <Trans
             i18nKey="year_in_review_desc"
-            values={{ countryName: t(`countries_locative:${_props.country}`) }}
+            values={{ countryName: t(`countries_locative:${_props.userCountry}`) }}
             components={{ accented: <span className="accented" /> }}
           />
         </p>
@@ -160,6 +166,13 @@ const Homepage = (
           </li>
         </ul>
         <div id="map-container" />
+        <YearInReviewGeneralData {...{
+          country,
+          userCountry: _props.userCountry,
+          auth: isAuth,
+          setAuth,
+          t,
+        }} />
       </main>
       <Footer />
     </>
@@ -180,11 +193,12 @@ export const getStaticProps: GetStaticProps<Props> = async ({
 }) => {
   return ({
     props: {
-      country: LOCALE_TO_COUNTRY_CODE[locale as keyof typeof LOCALE_TO_COUNTRY_CODE] || 'RS',
+      userCountry: LOCALE_TO_COUNTRY_CODE[locale as keyof typeof LOCALE_TO_COUNTRY_CODE] || 'RS',
       ...(await serverSideTranslations(locale ?? 'en', [
         'common',
         'countries',
-        'countries_locative'
+        'countries_locative',
+        'dates',
       ])),
     },
   })
