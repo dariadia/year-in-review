@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 
@@ -8,10 +7,16 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import { useState } from 'react'
-
+import { Event } from 'types/data'
 // @ts-ignore
 import general from '/public/assets/data/countries.json'
-import { Event } from 'types/data'
+// @ts-ignore
+import personal from '/public/assets/data/user-data.json'
+// @ts-ignore
+import quiz from '/public/assets/data/quiz-data.json'
+// @ts-ignore
+import country from '/public/assets/data/coumtry-data.json'
+
 
 type Props = {
   country: string
@@ -160,6 +165,7 @@ const Homepage = (
           </li>
         </ul>
         <div id="map-container" />
+
       </main>
       <Footer />
     </>

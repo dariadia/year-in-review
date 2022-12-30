@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { TFunction, useTranslation } from 'next-i18next'
 import { FC } from 'react'
 import omit from 'lodash/omit'
@@ -54,6 +55,17 @@ anychart.onDocumentReady(function () {
     map.container('map-container');
     map.draw()
 });`
+
+const LaguageSwitcher = () => (
+  <div className='language-switcher'>
+    <Link href="/" locale='en'><button className='language-variant'>EN</button></Link>
+    <Link href="/" locale='da'><button className='language-variant'>DA</button></Link>
+    <Link href="/" locale='es'><button className='language-variant'>ES</button></Link>
+    <Link href="/" locale='sr'><button className='language-variant'>SR</button></Link>
+    <Link href="/" locale='hr'><button className='language-variant'>HR</button></Link>
+    <Link href="/" locale='bg'><button className='language-variant'>BG</button></Link>
+  </div>
+)
 
 type Props = { activeTab: string, activeTabLabel: string, general: GeneralData, country: string }
 
@@ -146,8 +158,11 @@ export const Header: FC<Props> = ({ activeTab, activeTabLabel, general, country 
       </script>
     </Head>
     <header>
-      <div className="logo_header user-avatar_header" />
-      <div className="logo_header your-company-logo_header" />
+      <div>
+        <div className="logo_header user-avatar_header" />
+        <div className="logo_header your-company-logo_header" />
+      </div>
+      <LaguageSwitcher />
     </header>
   </>
 }

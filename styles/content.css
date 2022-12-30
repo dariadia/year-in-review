@@ -239,7 +239,15 @@ ul {
   overflow-y: hidden;
   white-space: nowrap;
   padding-bottom: 12px;
-  display: flex
+  display: flex;
+  max-width: calc(100% - 40px);
+  margin: auto;
+}
+
+@media screen and (max-width:767px) {
+  .map-navigation {
+    max-width: inherit;
+  }
 }
 
 .map-navigation .year-in-review__button {
