@@ -2,7 +2,7 @@ import { FC } from "react"
 import { Trans } from "react-i18next"
 import { CountryData, YearInReviewAuthor, YearInReviewBook, YearInReviewQuote, YearInReviewShelf } from "types/data"
 
-const getReducedNumber = (number: number): string => {
+export const getReducedNumber = (number: number): string => {
   const metrics = ['', 'K', 'M']
 
   const power = number.toExponential()?.split(/e/).pop()
@@ -15,10 +15,11 @@ const getReducedNumber = (number: number): string => {
   return value + metrics[rank]
 }
 
-const urlHelper = {
+export const urlHelper = {
   book: (uuid: string) => `/mock/book/${uuid}`,
   author: (uuid: string) => `/mock/author/${uuid}`,
   shelf: (uuid: string) => `/mock/shelf/${uuid}`,
+  resource: (uuid: string, type: string) => `/mock/${type}/${uuid}`
 }
 
 const YearInReviewAuthorSample = ({

@@ -44,7 +44,9 @@ export type YearInReviewBook = {
   cover: string
   title: string
   name?: string
-  authors: { author_name: string; uuid: string }[]
+  authors: {
+    author_name: string; uuid: string
+  }[]
   kind: BookOrSerial
   readers_count: number
   quotes_count: number
