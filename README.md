@@ -7,6 +7,7 @@ You see a sample landing page on reading statics of a e-library service.
 - translations (English, Spanish, Danish, Serbian, Croatian, Bulgarian);
 - an interactive map;
 - sample login option;
+- responsive layout suitable for desktops, tablets and even the smallest of mobile phones.
 
 ## Employs
 - [Next.js](https://nextjs.org/)
